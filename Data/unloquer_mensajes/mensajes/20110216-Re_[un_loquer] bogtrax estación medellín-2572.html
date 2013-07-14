@@ -1,0 +1,506 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] bogtrax estación medellín</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] bogtrax estación medellín</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>Diego <diegot@gmx.net></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>16/02/11 12:24</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+Pues tenemos un OSC ke probando permite recibir um midi completo de 60
+puntos distintos de entradas .. adjunto patch de entrada que sin estar
+armonicamente coordinado con kalasnikov ya lo he probado y funciona ..
+faltaria entrarle el modulo de sonido  yo tengo uno ke utilizo para todo
+nada original
+
+este esta basado en iphone app touch osc .. y permite tener 2 iphone
+conectados al mismo patch es muy interesante magnana jueves en c3p en la
+magnana deberiamos reunir todo lo ke tenemos para ver ke vamos a llevar
+finalmente
+
+
+El 16/02/2011 11:45 a.m., federico lopez escribió:
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt; </span>Saludos,
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>Complementario al sistema que reacciona a OSC enviado por Bogotá, en
+<span class="moz-txt-citetags">&gt; </span>el que se esta trabajando, podríamos adicionar un sistema de reacción
+<span class="moz-txt-citetags">&gt; </span>humana básico, donde personas que no estan generando cosas desde la
+<span class="moz-txt-citetags">&gt; </span>máquina puedan emitir sonidos (daniel con sus circuitos, olla, etc) y
+<span class="moz-txt-citetags">&gt; </span>se sumen al audio que regresamos, estas personas mirarían la webcam y
+<span class="moz-txt-citetags">&gt; </span>reaccionarían a lo que ven.
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>lo complementaré en el diagrama.
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>fede.
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+<span class="moz-txt-citetags">&gt;</span>
+</pre></blockquote><pre wrap>
+
+</pre></div><BR><FIELDSET CLASS="mimeAttachmentHeader"><LEGEND CLASS="mimeAttachmentHeaderName">Simple.touchosc.pd</LEGEND></FIELDSET><BR/><div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+#N canvas 1139 273 700 600 10;
+#X obj 10 30 OSCroute /1 /2 /3 /4;
+#X obj 10 50 OSCroute /fader5 /fader1 /fader2 /fader3 /fader4 /toggle1
+/toggle2 /toggle3 /toggle4;
+#X obj 10 100 * 127;
+#X obj 10 130 ctlout 1 1;
+#X obj 100 100 * 127;
+#X obj 100 130 ctlout 2 1;
+#X obj 190 100 * 127;
+#X obj 190 130 ctlout 3 1;
+#X obj 280 100 * 127;
+#X obj 280 130 ctlout 4 1;
+#X obj 370 100 * 127;
+#X obj 370 130 ctlout 5 1;
+#X obj 460 100 * 127;
+#X obj 460 130 ctlout 6 1;
+#X obj 550 100 * 127;
+#X obj 550 130 ctlout 7 1;
+#X obj 640 100 * 127;
+#X obj 640 130 ctlout 8 1;
+#X obj 730 100 * 127;
+#X obj 730 130 ctlout 9 1;
+#X obj 10 220 OSCroute /push1 /push2 /push3 /push4 /push5 /push6 /push7
+/push8 /push9 /push10 /push11 /push12 /push13 /push14 /push15 /push16
+/toggle1 /toggle2 /toggle3 /toggle4;
+#X obj 10 270 * 127;
+#X obj 10 300 ctlout 1 2;
+#X obj 100 270 * 127;
+#X obj 100 300 ctlout 2 2;
+#X obj 190 270 * 127;
+#X obj 190 300 ctlout 3 2;
+#X obj 280 270 * 127;
+#X obj 280 300 ctlout 4 2;
+#X obj 370 270 * 127;
+#X obj 370 300 ctlout 5 2;
+#X obj 460 270 * 127;
+#X obj 460 300 ctlout 6 2;
+#X obj 550 270 * 127;
+#X obj 550 300 ctlout 7 2;
+#X obj 640 270 * 127;
+#X obj 640 300 ctlout 8 2;
+#X obj 730 270 * 127;
+#X obj 730 300 ctlout 9 2;
+#X obj 820 270 * 127;
+#X obj 820 300 ctlout 10 2;
+#X obj 910 270 * 127;
+#X obj 910 300 ctlout 11 2;
+#X obj 1000 270 * 127;
+#X obj 1000 300 ctlout 12 2;
+#X obj 1090 270 * 127;
+#X obj 1090 300 ctlout 13 2;
+#X obj 1180 270 * 127;
+#X obj 1180 300 ctlout 14 2;
+#X obj 1270 270 * 127;
+#X obj 1270 300 ctlout 15 2;
+#X obj 1360 270 * 127;
+#X obj 1360 300 ctlout 16 2;
+#X obj 1450 270 * 127;
+#X obj 1450 300 ctlout 17 2;
+#X obj 1540 270 * 127;
+#X obj 1540 300 ctlout 18 2;
+#X obj 1630 270 * 127;
+#X obj 1630 300 ctlout 19 2;
+#X obj 1720 270 * 127;
+#X obj 1720 300 ctlout 20 2;
+#X obj 10 390 OSCroute /xy /toggle1 /toggle2 /toggle3 /toggle4;
+#X obj 10 440 unpack 0.1 0.1;
+#X obj 10 470 * 127;
+#X obj 10 500 ctlout 1 3;
+#X obj 91 470 * 127;
+#X obj 91 500 ctlout 2 3;
+#X obj 180 440 * 127;
+#X obj 180 470 ctlout 3 3;
+#X obj 270 440 * 127;
+#X obj 270 470 ctlout 4 3;
+#X obj 360 440 * 127;
+#X obj 360 470 ctlout 5 3;
+#X obj 450 440 * 127;
+#X obj 450 470 ctlout 6 3;
+#X obj 10 560 OSCroute /multitoggle /toggle1 /toggle2 /toggle3 /toggle4
+;
+#X obj 10 610 OSCroute /1 /2 /3 /4 /5 /6 /7 /8;
+#X obj 10 660 OSCroute /1 /2 /3 /4 /5 /6 /7 /8;
+#X obj 10 710 * 127;
+#X obj 10 740 ctlout 1 4;
+#X obj 100 710 * 127;
+#X obj 100 740 ctlout 2 4;
+#X obj 190 710 * 127;
+#X obj 190 740 ctlout 3 4;
+#X obj 280 710 * 127;
+#X obj 280 740 ctlout 4 4;
+#X obj 370 710 * 127;
+#X obj 370 740 ctlout 5 4;
+#X obj 460 710 * 127;
+#X obj 460 740 ctlout 6 4;
+#X obj 550 710 * 127;
+#X obj 550 740 ctlout 7 4;
+#X obj 640 710 * 127;
+#X obj 640 740 ctlout 8 4;
+#X obj 380 660 OSCroute /1 /2 /3 /4 /5 /6 /7 /8;
+#X obj 380 710 * 127;
+#X obj 380 740 ctlout 9 4;
+#X obj 470 710 * 127;
+#X obj 470 740 ctlout 10 4;
+#X obj 560 710 * 127;
+#X obj 560 740 ctlout 11 4;
+#X obj 650 710 * 127;
+#X obj 650 740 ctlout 12 4;
+#X obj 740 710 * 127;
+#X obj 740 740 ctlout 13 4;
+#X obj 830 710 * 127;
+#X obj 830 740 ctlout 14 4;
+#X obj 920 710 * 127;
+#X obj 920 740 ctlout 15 4;
+#X obj 1010 710 * 127;
+#X obj 1010 740 ctlout 16 4;
+#X obj 750 660 OSCroute /1 /2 /3 /4 /5 /6 /7 /8;
+#X obj 750 710 * 127;
+#X obj 750 740 ctlout 17 4;
+#X obj 840 710 * 127;
+#X obj 840 740 ctlout 18 4;
+#X obj 930 710 * 127;
+#X obj 930 740 ctlout 19 4;
+#X obj 1020 710 * 127;
+#X obj 1020 740 ctlout 20 4;
+#X obj 1110 710 * 127;
+#X obj 1110 740 ctlout 21 4;
+#X obj 1200 710 * 127;
+#X obj 1200 740 ctlout 22 4;
+#X obj 1290 710 * 127;
+#X obj 1290 740 ctlout 23 4;
+#X obj 1380 710 * 127;
+#X obj 1380 740 ctlout 24 4;
+#X obj 1120 660 OSCroute /1 /2 /3 /4 /5 /6 /7 /8;
+#X obj 1120 710 * 127;
+#X obj 1120 740 ctlout 25 4;
+#X obj 1210 710 * 127;
+#X obj 1210 740 ctlout 26 4;
+#X obj 1300 710 * 127;
+#X obj 1300 740 ctlout 27 4;
+#X obj 1390 710 * 127;
+#X obj 1390 740 ctlout 28 4;
+#X obj 1480 710 * 127;
+#X obj 1480 740 ctlout 29 4;
+#X obj 1570 710 * 127;
+#X obj 1570 740 ctlout 30 4;
+#X obj 1660 710 * 127;
+#X obj 1660 740 ctlout 31 4;
+#X obj 1750 710 * 127;
+#X obj 1750 740 ctlout 32 4;
+#X obj 1490 660 OSCroute /1 /2 /3 /4 /5 /6 /7 /8;
+#X obj 1490 710 * 127;
+#X obj 1490 740 ctlout 33 4;
+#X obj 1580 710 * 127;
+#X obj 1580 740 ctlout 34 4;
+#X obj 1670 710 * 127;
+#X obj 1670 740 ctlout 35 4;
+#X obj 1760 710 * 127;
+#X obj 1760 740 ctlout 36 4;
+#X obj 1850 710 * 127;
+#X obj 1850 740 ctlout 37 4;
+#X obj 1940 710 * 127;
+#X obj 1940 740 ctlout 38 4;
+#X obj 2030 710 * 127;
+#X obj 2030 740 ctlout 39 4;
+#X obj 2120 710 * 127;
+#X obj 2120 740 ctlout 40 4;
+#X obj 1860 660 OSCroute /1 /2 /3 /4 /5 /6 /7 /8;
+#X obj 1860 710 * 127;
+#X obj 1860 740 ctlout 41 4;
+#X obj 1950 710 * 127;
+#X obj 1950 740 ctlout 42 4;
+#X obj 2040 710 * 127;
+#X obj 2040 740 ctlout 43 4;
+#X obj 2130 710 * 127;
+#X obj 2130 740 ctlout 44 4;
+#X obj 2220 710 * 127;
+#X obj 2220 740 ctlout 45 4;
+#X obj 2310 710 * 127;
+#X obj 2310 740 ctlout 46 4;
+#X obj 2400 710 * 127;
+#X obj 2400 740 ctlout 47 4;
+#X obj 2490 710 * 127;
+#X obj 2490 740 ctlout 48 4;
+#X obj 2230 660 OSCroute /1 /2 /3 /4 /5 /6 /7 /8;
+#X obj 2230 710 * 127;
+#X obj 2230 740 ctlout 49 4;
+#X obj 2320 710 * 127;
+#X obj 2320 740 ctlout 50 4;
+#X obj 2410 710 * 127;
+#X obj 2410 740 ctlout 51 4;
+#X obj 2500 710 * 127;
+#X obj 2500 740 ctlout 52 4;
+#X obj 2590 710 * 127;
+#X obj 2590 740 ctlout 53 4;
+#X obj 2680 710 * 127;
+#X obj 2680 740 ctlout 54 4;
+#X obj 2770 710 * 127;
+#X obj 2770 740 ctlout 55 4;
+#X obj 2860 710 * 127;
+#X obj 2860 740 ctlout 56 4;
+#X obj 2600 660 OSCroute /1 /2 /3 /4 /5 /6 /7 /8;
+#X obj 2600 710 * 127;
+#X obj 2600 740 ctlout 57 4;
+#X obj 2690 710 * 127;
+#X obj 2690 740 ctlout 58 4;
+#X obj 2780 710 * 127;
+#X obj 2780 740 ctlout 59 4;
+#X obj 2870 710 * 127;
+#X obj 2870 740 ctlout 60 4;
+#X obj 2960 710 * 127;
+#X obj 2960 740 ctlout 61 4;
+#X obj 3050 710 * 127;
+#X obj 3050 740 ctlout 62 4;
+#X obj 3140 710 * 127;
+#X obj 3140 740 ctlout 63 4;
+#X obj 3230 710 * 127;
+#X obj 3230 740 ctlout 64 4;
+#X obj 40 640 * 127;
+#X obj 40 670 ctlout 65 4;
+#X obj 130 640 * 127;
+#X obj 130 670 ctlout 66 4;
+#X obj 220 640 * 127;
+#X obj 220 670 ctlout 67 4;
+#X obj 310 640 * 127;
+#X obj 310 670 ctlout 68 4;
+#X obj 10 10 dumpOSC 8000;
+#X obj 346 17 print rcvOSC;
+#X obj 469 27 s rcvOSC;
+#X connect 0 0 1 0;
+#X connect 0 1 20 0;
+#X connect 0 2 61 0;
+#X connect 0 3 75 0;
+#X connect 1 0 2 0;
+#X connect 1 1 4 0;
+#X connect 1 2 6 0;
+#X connect 1 3 8 0;
+#X connect 1 4 10 0;
+#X connect 1 5 12 0;
+#X connect 1 6 14 0;
+#X connect 1 7 16 0;
+#X connect 1 8 18 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 8 0 9 0;
+#X connect 10 0 11 0;
+#X connect 12 0 13 0;
+#X connect 14 0 15 0;
+#X connect 16 0 17 0;
+#X connect 18 0 19 0;
+#X connect 20 0 21 0;
+#X connect 20 1 23 0;
+#X connect 20 2 25 0;
+#X connect 20 3 27 0;
+#X connect 20 4 29 0;
+#X connect 20 5 31 0;
+#X connect 20 6 33 0;
+#X connect 20 7 35 0;
+#X connect 20 8 37 0;
+#X connect 20 9 39 0;
+#X connect 20 10 41 0;
+#X connect 20 11 43 0;
+#X connect 20 12 45 0;
+#X connect 20 13 47 0;
+#X connect 20 14 49 0;
+#X connect 20 15 51 0;
+#X connect 20 16 53 0;
+#X connect 20 17 55 0;
+#X connect 20 18 57 0;
+#X connect 20 19 59 0;
+#X connect 21 0 22 0;
+#X connect 23 0 24 0;
+#X connect 25 0 26 0;
+#X connect 27 0 28 0;
+#X connect 29 0 30 0;
+#X connect 31 0 32 0;
+#X connect 33 0 34 0;
+#X connect 35 0 36 0;
+#X connect 37 0 38 0;
+#X connect 39 0 40 0;
+#X connect 41 0 42 0;
+#X connect 43 0 44 0;
+#X connect 45 0 46 0;
+#X connect 47 0 48 0;
+#X connect 49 0 50 0;
+#X connect 51 0 52 0;
+#X connect 53 0 54 0;
+#X connect 55 0 56 0;
+#X connect 57 0 58 0;
+#X connect 59 0 60 0;
+#X connect 61 0 62 0;
+#X connect 61 1 67 0;
+#X connect 61 2 69 0;
+#X connect 61 3 71 0;
+#X connect 61 4 73 0;
+#X connect 62 0 63 0;
+#X connect 62 1 65 0;
+#X connect 63 0 64 0;
+#X connect 65 0 66 0;
+#X connect 67 0 68 0;
+#X connect 69 0 70 0;
+#X connect 71 0 72 0;
+#X connect 73 0 74 0;
+#X connect 75 0 76 0;
+#X connect 75 1 213 0;
+#X connect 75 2 215 0;
+#X connect 75 3 217 0;
+#X connect 75 4 219 0;
+#X connect 76 0 77 0;
+#X connect 76 1 94 0;
+#X connect 76 2 111 0;
+#X connect 76 3 128 0;
+#X connect 76 4 145 0;
+#X connect 76 5 162 0;
+#X connect 76 6 179 0;
+#X connect 76 7 196 0;
+#X connect 77 0 78 0;
+#X connect 77 1 80 0;
+#X connect 77 2 82 0;
+#X connect 77 3 84 0;
+#X connect 77 4 86 0;
+#X connect 77 5 88 0;
+#X connect 77 6 90 0;
+#X connect 77 7 92 0;
+#X connect 78 0 79 0;
+#X connect 80 0 81 0;
+#X connect 82 0 83 0;
+#X connect 84 0 85 0;
+#X connect 86 0 87 0;
+#X connect 88 0 89 0;
+#X connect 90 0 91 0;
+#X connect 92 0 93 0;
+#X connect 94 0 95 0;
+#X connect 94 1 97 0;
+#X connect 94 2 99 0;
+#X connect 94 3 101 0;
+#X connect 94 4 103 0;
+#X connect 94 5 105 0;
+#X connect 94 6 107 0;
+#X connect 94 7 109 0;
+#X connect 95 0 96 0;
+#X connect 97 0 98 0;
+#X connect 99 0 100 0;
+#X connect 101 0 102 0;
+#X connect 103 0 104 0;
+#X connect 105 0 106 0;
+#X connect 107 0 108 0;
+#X connect 109 0 110 0;
+#X connect 111 0 112 0;
+#X connect 111 1 114 0;
+#X connect 111 2 116 0;
+#X connect 111 3 118 0;
+#X connect 111 4 120 0;
+#X connect 111 5 122 0;
+#X connect 111 6 124 0;
+#X connect 111 7 126 0;
+#X connect 112 0 113 0;
+#X connect 114 0 115 0;
+#X connect 116 0 117 0;
+#X connect 118 0 119 0;
+#X connect 120 0 121 0;
+#X connect 122 0 123 0;
+#X connect 124 0 125 0;
+#X connect 126 0 127 0;
+#X connect 128 0 129 0;
+#X connect 128 1 131 0;
+#X connect 128 2 133 0;
+#X connect 128 3 135 0;
+#X connect 128 4 137 0;
+#X connect 128 5 139 0;
+#X connect 128 6 141 0;
+#X connect 128 7 143 0;
+#X connect 129 0 130 0;
+#X connect 131 0 132 0;
+#X connect 133 0 134 0;
+#X connect 135 0 136 0;
+#X connect 137 0 138 0;
+#X connect 139 0 140 0;
+#X connect 141 0 142 0;
+#X connect 143 0 144 0;
+#X connect 145 0 146 0;
+#X connect 145 1 148 0;
+#X connect 145 2 150 0;
+#X connect 145 3 152 0;
+#X connect 145 4 154 0;
+#X connect 145 5 156 0;
+#X connect 145 6 158 0;
+#X connect 145 7 160 0;
+#X connect 146 0 147 0;
+#X connect 148 0 149 0;
+#X connect 150 0 151 0;
+#X connect 152 0 153 0;
+#X connect 154 0 155 0;
+#X connect 156 0 157 0;
+#X connect 158 0 159 0;
+#X connect 160 0 161 0;
+#X connect 162 0 163 0;
+#X connect 162 1 165 0;
+#X connect 162 2 167 0;
+#X connect 162 3 169 0;
+#X connect 162 4 171 0;
+#X connect 162 5 173 0;
+#X connect 162 6 175 0;
+#X connect 162 7 177 0;
+#X connect 163 0 164 0;
+#X connect 165 0 166 0;
+#X connect 167 0 168 0;
+#X connect 169 0 170 0;
+#X connect 171 0 172 0;
+#X connect 173 0 174 0;
+#X connect 175 0 176 0;
+#X connect 177 0 178 0;
+#X connect 179 0 180 0;
+#X connect 179 1 182 0;
+#X connect 179 2 184 0;
+#X connect 179 3 186 0;
+#X connect 179 4 188 0;
+#X connect 179 5 190 0;
+#X connect 179 6 192 0;
+#X connect 179 7 194 0;
+#X connect 180 0 181 0;
+#X connect 182 0 183 0;
+#X connect 184 0 185 0;
+#X connect 186 0 187 0;
+#X connect 188 0 189 0;
+#X connect 190 0 191 0;
+#X connect 192 0 193 0;
+#X connect 194 0 195 0;
+#X connect 196 0 197 0;
+#X connect 196 1 199 0;
+#X connect 196 2 201 0;
+#X connect 196 3 203 0;
+#X connect 196 4 205 0;
+#X connect 196 5 207 0;
+#X connect 196 6 209 0;
+#X connect 196 7 211 0;
+#X connect 197 0 198 0;
+#X connect 199 0 200 0;
+#X connect 201 0 202 0;
+#X connect 203 0 204 0;
+#X connect 205 0 206 0;
+#X connect 207 0 208 0;
+#X connect 209 0 210 0;
+#X connect 211 0 212 0;
+#X connect 213 0 214 0;
+#X connect 215 0 216 0;
+#X connect 217 0 218 0;
+#X connect 219 0 220 0;
+#X connect 221 0 0 0;
+#X connect 221 0 222 0;
+#X connect 221 0 223 0;
+</pre></div><BR><FIELDSET CLASS="mimeAttachmentHeader"></FIELDSET><BR/><div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></div></body>
+</html>
+<br><fieldset class="mimeAttachmentHeader"><legend class="mimeAttachmentHeaderName">Adjuntos:</legend></fieldset><div class="mimeAttachmentWrap"><table class="mimeAttachmentTable"><tr><td class="mimeAttachmentFile">Simple.touchosc.pd</td><td class="mimeAttachmentSize">11.1 KB</td></tr></table></div>

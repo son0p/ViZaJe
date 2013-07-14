@@ -1,0 +1,68 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] Concierto</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] Concierto</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>daniel gomez <danielgomezmarin@gmail.com></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>15/09/11 15:06</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-html"  lang="x-western">Hey.<div>&gt;Yo creo que si se puede sacar la fft de un audio desde la entrada, con los objetos ofSoundStream, no se si se pueda usar la misma función de of para calcular los coeficientes de la fft, pero ya tenemos la entrada de audio en un buffer donde podemos hacer lo que sea con esos datos.</div>
+<div><br></div><div>Esto suena perfecto. Finalemente la fft es la fft en donde sea que se calcule.</div><div><br></div><div><span class="Apple-style-span" style="font-family: arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255); ">&gt;Ya estuve mirando PD y creo que voy a parar con lo de análisis de audio por el lado de OF. Al parecer es mucho más sencillo y rápido hacerlo con PD y usar OF solo para lo visual.</span></div>
+<div><span class="Apple-style-span" style="font-family: arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255); ">Pues puede ser un punto de entrada donde la curva de aprendizaje es menos empinada. También hay varios que podemos camellar en PD mas que en C++ (creo que en C++ Rafa sería el hombre a consultar). Pero mas allá del lenguaje están las ideas: si definimos cuales son las necesidades de ese analizador de audio, podemos ir mas al grano cuando programemos.</span></div>
+<div><span class="Apple-style-span" style="font-family: arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255); "><br></span></div><div><span class="Apple-style-span" style="font-family: arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255); ">Preguntas:</span></div>
+<div><span class="Apple-style-span" style="font-family: arial, sans-serif; font-size: 13px; background-color: rgb(255, 255, 255); ">Que tipo de audio vamos a analizar? Que tipo de respuestas esperamos?</span></div><div><font class="Apple-style-span" face="arial, sans-serif"><br>
+</font></div><div><font class="Apple-style-span" face="arial, sans-serif">Si nos ponemos de acuerdo en esto, podemos camellar enfocados en algo. En el tema del coro era claro, pero no tuve el tiempo para dedicarme. Si tenemos un nuevo objetivo, me apunto.</font></div>
+<div><font class="Apple-style-span" face="arial, sans-serif"><br></font></div><div><font class="Apple-style-span" face="arial, sans-serif">Saludos</font></div><div><font class="Apple-style-span" face="arial, sans-serif"><br>
+</font></div><div><font class="Apple-style-span" face="arial, sans-serif">D</font></div><div><br><br><div class="gmail_quote">El 15 de septiembre de 2011 13:27, Juan Camilo Mejía <span dir="ltr">&lt;<a href="mailto:camilosw@gmail.com">camilosw@gmail.com</a>&gt;</span> escribió:<br>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex;">Ya estuve mirando PD y creo que voy a parar con lo de análisis de audio por el lado de OF. Al parecer es mucho más sencillo y rápido hacerlo con PD y usar OF solo para lo visual.<br>
+<br><div class="gmail_quote"><div class="im">2011/9/15 brolin . <span dir="ltr">&lt;<a href="mailto:brolin108@gmail.com" target="_blank">brolin108@gmail.com</a>&gt;</span><br>
+</div><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Yo creo que si se puede sacar la fft de un audio desde la entrada, con los objetos ofSoundStream, no se si se pueda usar la misma función de of para calcular los coeficientes de la fft, pero ya tenemos la entrada de audio en un buffer donde podemos hacer lo que sea con esos datos. La verdad no tengo mucho tiempo ahora porque ando medio envalado, pero espero sacarle un rato a eso.<div>
+<div></div><div class="h5"><div>
+
+<br></div><div>Lo otro es seguir camellando con pd y unir las cosas con OSC<br><div><br></div><div>Saludos</div><div>--</div><div><font color="#888888">b</font><div><div></div><div><br><br><div class="gmail_quote">
+2011/9/15 Juan Camilo Mejía <span dir="ltr">&lt;<a href="mailto:camilosw@gmail.com" target="_blank">camilosw@gmail.com</a>&gt;</span><br>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Daniel, que buenos consejos. Yo apenas estoy arrancando con esto de analizar el audio. Con PD todavía no me he metido, pero ya lo instalé y empecé a pillar como funciona. Pasame porfa el PD que me comentás, porque con OF solo se puede sacar la fft de un audio cargado desde un archivo, no desde una entrada de audio. Además, por lo que he escuchado, PD da más posibilidades al hacer análisis de audio.<div>
+
+
+
+<br></div><div>Del punto 6, la idea es que si tenemos varias entradas de audio, armemos una red para que cada equipo analice una o dos entradas y mande las variables al equipo que tenga los visuales.</div><div><br></div>
+
+
+<div>
+Me suena que nos sentemos a trabajarle a esto, pero hoy en la tarde no puedo, ese es el problema del horario de oficina. Pero si vas a caer ahora a la miscelánea a lo de audioprogramming, conversamos.</div><div><br><div class="gmail_quote">
+
+
+
+On Thu, Sep 15, 2011 at 8:09 AM, Eliana Andrea Vaca Muñoz <span dir="ltr">&lt;<a href="mailto:vacamuchi@gmail.com" target="_blank">vacamuchi@gmail.com</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+
+
+
+<br>que cool
+<br><div>_______________________________________________<br>
+unloquer mailing list<br>
+<a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+<br></div></blockquote></div><br></div>
+<br>_______________________________________________<br>
+unloquer mailing list<br>
+<a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+<br></blockquote></div><br></div></div></div></div>
+<br>_______________________________________________<br>
+unloquer mailing list<br>
+<a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+<br></div></div></blockquote></div><br>
+<br>_______________________________________________<br>
+unloquer mailing list<br>
+<a href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a><br>
+<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+<br></blockquote></div><br></div>
+
+</div><BR><FIELDSET CLASS="mimeAttachmentHeader"></FIELDSET><BR/><div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></div></body>
+</html>
+</table></div>

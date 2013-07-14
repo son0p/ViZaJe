@@ -1,0 +1,27 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Formato OSC del detector de personas</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Formato OSC del detector de personas</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>&quot;brolin .&quot; &lt;brolin108@gmail.com&gt;</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>10/02/11 06:50</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-html"  lang="x-western">Hola,<div><br></div><div>No he tramitado las credenciales para editar el wiki, entonces por este medio por ahora:</div><div><br></div><div>OpenTSPS es un programa escrito en C++ con openframeworks (<a href="http://opentsps.com/">http://opentsps.com/</a>) para detectar por medio de procesamiento de imágenes personas. Puede enviar los datos de detección en distintos formatos inclusive OSC que nos interesa para nuestro caso. El formato de los mensajes es el siguiente:</div>
+<div><br></div><div>Cuatro tipos de mensaje diferentes:</div><div><br></div><div>TSPS/personEntered/</div><div>TSPS/personMoved/</div><div>TSPS/personUpdated/</div><div>TSPS/personWillLeave/</div><div><br></div><div>Con estos vienen los siguientes datos:</div>
+<div><br></div><div><div>Int:id (Identificador de blob detectado)                                                                                           </div><div>Int:age (Edad de blob en frames)                                                                                                 </div>
+<div>Float:centroidx                                                                                           </div><div>Float:centroidy                                                                                           </div>
+<div>Float:velocityx                                                                                        </div><div>Float:velocityy</div><div>Float:boundingRectx                                                                                       </div>
+<div>Float:boundingRecty                                                                                       </div><div>Float:boundingRectwidth                                                                                   </div>
+<div>Float:boundingRectheight</div><div>Float:opticalFlowVectorAccumulationx                                                                   </div><div>Float:opticalFlowVectorAccumulationy                                                                   </div>
+<div>                                                        </div><div>Si se activa la opción para enviar los contornos, el conjunto de parejas x,y que los definen:                                                                     </div>
+<div><div>Float:simpleContourx</div><div>Float:simpleContoury</div></div></div><div><br></div><div>Cualquier duda, alimenten este hilo.</div><div><br></div><div>De wikipedia, para los que no saben que es OSC:</div><div><br>
+</div><div>&quot;<span class="Apple-style-span" style="font-family: sans-serif; font-size: 13px; line-height: 19px; ">Open Sound Control es un protocolo de comunicaciones que permite comunicar instrumentos de música, computadoras y otros dispositivos multimedia (por ejemplo móviles o PDA&#39;s equipados con bluetooth) pensado para compartir información musical en tiempo real sobre una red.</span></div>
+<meta http-equiv="content-type" content="text/html; "><span class="Apple-style-span" style="font-size: 13px; line-height: 19px; font-family: sans-serif; "><p style="margin-top: 0.4em; margin-right: 0px; margin-bottom: 0.5em; margin-left: 0px; line-height: 1.5em; ">
+Aparece como reemplazo del <a href="http://es.wikipedia.org/wiki/MIDI" title="MIDI" style="text-decoration: none; color: rgb(6, 69, 173); background-image: none; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-position: initial initial; background-repeat: initial initial; ">MIDI</a>, siendo muy superior en caracterísitcas y capacidades. ...&quot;</p>
+<p style="margin-top: 0.4em; margin-right: 0px; margin-bottom: 0.5em; margin-left: 0px; line-height: 1.5em; "><meta http-equiv="content-type" content="text/html; charset=utf-8"><a href="http://es.wikipedia.org/wiki/OpenSound_Control">http://es.wikipedia.org/wiki/OpenSound_Control</a></p>
+<p style="margin-top: 0.4em; margin-right: 0px; margin-bottom: 0.5em; margin-left: 0px; line-height: 1.5em; "><br></p><p style="margin-top: 0.4em; margin-right: 0px; margin-bottom: 0.5em; margin-left: 0px; line-height: 1.5em; ">
+--</p><p style="margin-top: 0.4em; margin-right: 0px; margin-bottom: 0.5em; margin-left: 0px; line-height: 1.5em; ">b</p><p style="margin-top: 0.4em; margin-right: 0px; margin-bottom: 0.5em; margin-left: 0px; line-height: 1.5em; ">
+<br></p></span><meta http-equiv="content-type" content="text/html; ">
+
+</div></body>
+</html>
+</table></div>

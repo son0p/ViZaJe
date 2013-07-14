@@ -1,0 +1,153 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] Tarde de clonación de Arduinos</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] Tarde de clonación de Arduinos</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>Daniel Isaza <isaza.daniel@gmail.com></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>28/09/10 12:04</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+POR FIN!
+
+logré quemar el bootloader en dos Atmega168 usando el Duemilanove.
+
+la cosa es que los quemé usando directamente el avrdude en una
+terminal y no me estaba funcionando porque hacia rato tenía un script
+corriendo que escribía en el puerto serial (fue lo primero que debí
+haber chequeado) y al parecer eso reiniciaba el arduino aún con
+resitencias y cosas en el pin de reset, desactivé el script y quemó de
+una.
+
+No lo he probado usando el IDE de Arduino pero creo que ahora si
+funcionaría, adicionalmente le puse un condensador de 1µF en el pin de
+reset para "absorber" el pulso de reseteo. a lo mejor fue todo eso
+junto o que estoy intentando desde ayer y tuve suerte, pero ya
+funciona!
+
+Ahora a quemarle un Optiboot que lo quiero probar a ver que tal.
+
+
+Saludos
+
+./disaza
+
+2010/9/28 Diego <a class="moz-txt-link-rfc2396E" href="mailto:diegot@gmx.net">&lt;diegot@gmx.net&gt;</a>:
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt; </span> Yo lo logre y estos son las caracteristicas de entorno
+<span class="moz-txt-citetags">&gt; </span>Estaba en un windows XP sp2 o sp3
+<span class="moz-txt-citetags">&gt; </span>le puse los 4 pines en x3 (1 2 3 4) (arduino original)
+<span class="moz-txt-citetags">&gt; </span>Cable de 4 lineas como en el link
+<span class="moz-txt-citetags">&gt; </span>(<a class="moz-txt-link-freetext" href="http://www.geocities.jp/arduino_diecimila/bootloader/index_en.html">http://www.geocities.jp/arduino_diecimila/bootloader/index_en.html</a>)
+<span class="moz-txt-citetags">&gt; </span>las versiones del software de esa pagina
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>con eso logre kemar el bootloader de mi propio arduino .. ke de pasar
+<span class="moz-txt-citetags">&gt; </span>por makinas de rayos x de aeropuerto parece ke perdio la programacion no
+<span class="moz-txt-citetags">&gt; </span>se...  y otros 5 atmega168 ...  luego lo dificil era cambiar los atmega
+<span class="moz-txt-citetags">&gt; </span>de la placa porke la flasheada era ( click )
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>El 27/09/2010 08:46 p.m., Daniel Isaza escribió:
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt; </span>Pues si
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>Efectivamente hoy intenté quemar el bootloader en un Atmega168 usando
+<span class="moz-txt-citetags">&gt;&gt; </span>un Duemilanove y no pude de ninguna manera. Intenté con la famosa
+<span class="moz-txt-citetags">&gt;&gt; </span>resistencia y parece que ese no es el problema...  la cosa como que no
+<span class="moz-txt-citetags">&gt;&gt; </span>es del auto reset sino de sincronización o algo parecido, al menos
+<span class="moz-txt-citetags">&gt;&gt; </span>esos son los errores que salen. ya me quedé sin opciones porque
+<span class="moz-txt-citetags">&gt;&gt; </span>intenté todo, inclusive sin usar el cristal, con el clock del chip y
+<span class="moz-txt-citetags">&gt;&gt; </span>nada.
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>Lo raro es que parece que solo nos ha pasado a nosotros porque no
+<span class="moz-txt-citetags">&gt;&gt; </span>encuentro documentación sobre eso en ningún lado.
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>Si lo logran quemar con un Duemilanove me cuentan...
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>Saludos
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>./disaza
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>2010/9/27 Diego <a class="moz-txt-link-rfc2396E" href="mailto:diegot@gmx.net">&lt;diegot@gmx.net&gt;</a>:
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>Tengo ke buscar el link .. pero con 4 pines  y 6 cables puede un arduino -
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>de fabrica flashear los atmega168 y otros
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>es decir el mismo arduino con avrdude puede utilizarse para autoclonarse.
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span> yo se ke funciona porke a mi arduino yo le puse los 4 pines y tenia en
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>algun lugar el cable para auto-flashear atmegas en el montaje del arduino
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>me comprometo a desenterrar esa info
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>El 26/09/2010 05:57 p.m., kalashnikov escribió:
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>hola
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>pillen este
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span><a class="moz-txt-link-freetext" href="http://drug123.org.ua/mega-isp-shield/">http://drug123.org.ua/mega-isp-shield/</a>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>deja al arduino listo para flashear varios chips Atmel
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>yo le agregaria un
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>socket <a class="moz-txt-link-freetext" href="http://media.digikey.com/photos/Mill-Max%20Mfg%20Photos/110-43-628-41-001000.jpg">http://media.digikey.com/photos/Mill-Max%20Mfg%20Photos/110-43-628-41-001000.jpg</a>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>en el shield para que solo sea poner los chips arriba y ya.
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span><a class="moz-txt-link-freetext" href="http://www.flickr.com/photos/drug123/3718360064/">http://www.flickr.com/photos/drug123/3718360064/</a>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span><a class="moz-txt-link-freetext" href="http://www.flickr.com/photos/drug123/3718355976/">http://www.flickr.com/photos/drug123/3718355976/</a>
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>2010/9/26 Daniel Isaza <a class="moz-txt-link-rfc2396E" href="mailto:isaza.daniel@gmail.com">&lt;isaza.daniel@gmail.com&gt;</a>
+</pre><blockquote type=cite style="color: #000000;"><blockquote type=cite style="color: #000000;"><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt;&gt;&gt; </span>A.Aguirre:
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt;&gt;&gt; </span>Podríamos ir pensando en hacer unas shields para clonar chips de
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt;&gt;&gt; </span>Arduino. No
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt;&gt;&gt; </span>busqué muy profundamente si a alguien ya se le había ocurrido, pero por
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt;&gt;&gt; </span>lo
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt;&gt;&gt; </span>menos en Adafruit y en Sparkfun no venden nada parecido.
+</pre></blockquote></blockquote><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt; </span>A mi me parece que como proyecto es interesante, por el hecho de
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt; </span>ensamblar un shield, pero supongo que la razón por la que no existe un
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt; </span>shield comercial para esto es que uno: es un circuito tan simple que
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt; </span>se monta en un breadboard en un minuto, dos: es un procedimiento que
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt; </span>normalmente no se hace muy a menudo y tres: si se va a hacer muy
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt; </span>seguido, (ej: como negocio) sería mejor invertir en un programador.
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt; </span>Pero de todos modos bacano montar el shield!
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt; </span>./disaza
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt;&gt;&gt;&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></blockquote><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+</pre></blockquote><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt;&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt;&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt;&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+<span class="moz-txt-citetags">&gt;&gt;</span>
+</pre></blockquote><pre wrap>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+<span class="moz-txt-citetags">&gt;</span>
+</pre></blockquote><pre wrap>
+
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></div></body>
+</html>
+</table></div>

@@ -1,0 +1,53 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Fwd: beep</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Fwd: beep</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>alejo d <alejoduque@gmail.com></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>01/02/10 22:34</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>&quot;brolin .&quot; &lt;brolin108@gmail.com&gt;, hackerspace medellin &lt;unloquer@lists.aktivix.org&gt;</td></tr></table><br>
+<div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+pilla la de python, suena como un 8bits.. hay que hacer unas mas y
+ponerlas segun procesos, horas, dias, estados.
+
+
+---------- Forwarded message ----------
+From: alejo d <a class="moz-txt-link-rfc2396E" href="mailto:alejoduque@gmail.com">&lt;alejoduque@gmail.com&gt;</a>
+Date: Tue, Jan 26, 2010 at 11:42 AM
+Subject: Re: beep
+To: alejo d <a class="moz-txt-link-rfc2396E" href="mailto:alejoduque@gmail.com">&lt;alejoduque@gmail.com&gt;</a>
+
+
+beep -n -f 1500 -l 1000 -n 200 -l 500
+
+#############################################################
+#############################################################
+#!/usr/bin/env python
+
+import os
+
+#tunes for beeporama: (frequence,duration)
+tune1=[(1000,320),(900,10),(500,410),(400,10),(340,410),(300,10)]
+tune2=[(1000,10),(500,10),(440,20),(340,2),(720,4),(880,40)]
+
+tune=tune2
+
+cmd='beep -f100 -l1 '
+
+for i,j in tune:
+       cmd=cmd + ' -n -f '+ str(i) + ' -l'+str(j)
+
+os.system(cmd)
+
+#############################################################
+#############################################################
+
+
+
+
+On Mon, Jan 25, 2010 at 9:37 PM, alejo d <a class="moz-txt-link-rfc2396E" href="mailto:alejoduque@gmail.com">&lt;alejoduque@gmail.com&gt;</a> wrote:
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-freetext" href="http://malditonerd.wordpress.com/2008/09/07/pelotudeando-con-beep-beep2/">http://malditonerd.wordpress.com/2008/09/07/pelotudeando-con-beep-beep2/</a>
+<span class="moz-txt-citetags">&gt;</span>
+</pre></div></body>
+</html>
+</table></div>

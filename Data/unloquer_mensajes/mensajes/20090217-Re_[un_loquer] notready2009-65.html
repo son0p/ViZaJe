@@ -1,0 +1,48 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] notready2009</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] notready2009</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>alejo duque <alejoduque@gmail.com></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>17/02/09 12:21</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>unloquer@lists.aktivix.org</td></tr></table><br>
+<div class="moz-text-html"  lang="x-western"><html><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space; ">listo funciona el control de los servos desde irc! mas tarde subo un stream, o asi sea via skype para que lo ensayemos desde alla... gracias brolin por la ayuda ayer.<div><br></div><div>/a<br><div><br></div><div><br></div><div><span class="Apple-style-span" style="border-collapse: collapse; font-family: 'Trebuchet MS'; font-size: 15px; "><div class="syntax" style="background-image: initial; background-repeat: initial; background-attachment: initial; -webkit-background-clip: initial; -webkit-background-origin: initial; background-color: rgb(240, 240, 240); background-position: initial initial; "><pre style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 5px; padding-right: 0px; padding-bottom: 5px; padding-left: 0px; font-family: 'Bitstream Vera Sans Mono', monospace; font-size: 13px; "><span class="c" style="color: rgb(96, 160, 176); font-style: italic; ">#!/usr/bin/python                                                               </span>
+<span class="c" style="color: rgb(96, 160, 176); font-style: italic; "># encoding: utf-8                                                               </span>
+<span class="sd" style="color: rgb(64, 112, 160); font-style: italic; ">"""                                                                             </span>
+<span class="sd" style="color: rgb(64, 112, 160); font-style: italic; ">Created by ad on 2009-02-16.                                                    </span>
+<span class="sd" style="color: rgb(64, 112, 160); font-style: italic; ">NoCopyright 2009 __18kpies__. No rights reserved.                               </span>
+<span class="sd" style="color: rgb(64, 112, 160); font-style: italic; ">"""</span>
+
+<span class="kn" style="color: rgb(0, 112, 32); font-weight: bold; ">import</span> <span class="nn" style="color: rgb(14, 132, 181); font-weight: bold; ">string</span>
+<span class="kn" style="color: rgb(0, 112, 32); font-weight: bold; ">import</span> <span class="nn" style="color: rgb(14, 132, 181); font-weight: bold; ">servo</span>
+<span class="kn" style="color: rgb(0, 112, 32); font-weight: bold; ">import</span> <span class="nn" style="color: rgb(14, 132, 181); font-weight: bold; ">serial</span>
+<span class="kn" style="color: rgb(0, 112, 32); font-weight: bold; ">import</span> <span class="nn" style="color: rgb(14, 132, 181); font-weight: bold; ">time</span>
+<span class="kn" style="color: rgb(0, 112, 32); font-weight: bold; ">import</span> <span class="nn" style="color: rgb(14, 132, 181); font-weight: bold; ">random</span>
+
+<span class="kn" style="color: rgb(0, 112, 32); font-weight: bold; ">import</span> <span class="nn" style="color: rgb(14, 132, 181); font-weight: bold; ">supybot.utils</span> <span class="kn" style="color: rgb(0, 112, 32); font-weight: bold; ">as</span> <span class="nn" style="color: rgb(14, 132, 181); font-weight: bold; ">utils</span>
+<span class="kn" style="color: rgb(0, 112, 32); font-weight: bold; ">from</span> <span class="nn" style="color: rgb(14, 132, 181); font-weight: bold; ">supybot.commands</span> <span class="kn" style="color: rgb(0, 112, 32); font-weight: bold; ">import</span> <span class="o" style="color: rgb(102, 102, 102); ">*</span>
+<span class="kn" style="color: rgb(0, 112, 32); font-weight: bold; ">import</span> <span class="nn" style="color: rgb(14, 132, 181); font-weight: bold; ">supybot.plugins</span> <span class="kn" style="color: rgb(0, 112, 32); font-weight: bold; ">as</span> <span class="nn" style="color: rgb(14, 132, 181); font-weight: bold; ">plugins</span>
+<span class="kn" style="color: rgb(0, 112, 32); font-weight: bold; ">import</span> <span class="nn" style="color: rgb(14, 132, 181); font-weight: bold; ">supybot.ircutils</span> <span class="kn" style="color: rgb(0, 112, 32); font-weight: bold; ">as</span> <span class="nn" style="color: rgb(14, 132, 181); font-weight: bold; ">ircutils</span>
+<span class="kn" style="color: rgb(0, 112, 32); font-weight: bold; ">import</span> <span class="nn" style="color: rgb(14, 132, 181); font-weight: bold; ">supybot.callbacks</span> <span class="kn" style="color: rgb(0, 112, 32); font-weight: bold; ">as</span> <span class="nn" style="color: rgb(14, 132, 181); font-weight: bold; ">callbacks</span>
+
+
+<span class="k" style="color: rgb(0, 112, 32); font-weight: bold; ">class</span> <span class="nc" style="color: rgb(14, 132, 181); font-weight: bold; ">CamBot</span><span class="p">(</span><span class="n">callbacks</span><span class="o" style="color: rgb(102, 102, 102); ">.</span><span class="n">Plugin</span><span class="p">):</span>
+    <span class="k" style="color: rgb(0, 112, 32); font-weight: bold; ">def</span> <span class="nf" style="color: rgb(6, 40, 126); ">move</span><span class="p">(</span><span class="bp" style="color: rgb(0, 112, 32); ">self</span><span class="p">,</span> <span class="n">irc</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">motor</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
+        <span class="sd" style="color: rgb(64, 112, 160); font-style: italic; ">"""&lt;motor> &lt;value in degrees></span>
+
+<span class="sd" style="color: rgb(64, 112, 160); font-style: italic; ">        Moves the camera accordingly</span>
+<span class="sd" style="color: rgb(64, 112, 160); font-style: italic; ">        """</span>
+        <span class="n">servo</span><span class="o" style="color: rgb(102, 102, 102); ">.</span><span class="n">move</span><span class="p">(</span><span class="n">motor</span><span class="p">,</span> <span class="n">angle</span><span class="p">)</span>
+        <span class="n">irc</span><span class="o" style="color: rgb(102, 102, 102); ">.</span><span class="n">reply</span><span class="p">(</span><span class="s" style="color: rgb(64, 112, 160); ">"Moving Servo </span><span class="si" style="color: rgb(112, 160, 208); font-style: italic; ">%s</span><span class="s" style="color: rgb(64, 112, 160); "> </span><span class="si" style="color: rgb(112, 160, 208); font-style: italic; ">%s</span><span class="s" style="color: rgb(64, 112, 160); "> degrees"</span> <span class="o" style="color: rgb(102, 102, 102); ">%</span> <span class="p">(</span><span class="n">motor</span><span class="p">,</span> <span class="n">angle</span><span class="p">))</span>
+    <span class="n">move</span> <span class="o" style="color: rgb(102, 102, 102); ">=</span> <span class="n">wrap</span><span class="p">(</span><span class="n">move</span><span class="p">,</span> <span class="p">[</span><span class="s" style="color: rgb(64, 112, 160); ">'int'</span><span class="p">,</span> <span class="s" style="color: rgb(64, 112, 160); ">'int'</span><span class="p">])</span>
+
+<span class="n">Class</span> <span class="o" style="color: rgb(102, 102, 102); ">=</span> <span class="n">CamBot</span>
+
+<span class="c" style="color: rgb(96, 160, 176); font-style: italic; "># vim:set shiftwidth=4 tabstop=4 expandtab textwidth=79:</span></pre></div></span></div></div></body></html>
+</div><BR><FIELDSET CLASS="mimeAttachmentHeader"></FIELDSET><BR/><div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></div></body>
+</html>
+</table></div>

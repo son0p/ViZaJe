@@ -1,0 +1,95 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] Tarde de clonación de Arduinos</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] Tarde de clonación de Arduinos</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>Daniel Isaza <isaza.daniel@gmail.com></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>26/09/10 14:00</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-unicode"><pre wrap>
+Que bien que lograron quemar el bootloader!
+
+Bueno, igual el valor no es muy crítico y el rango es relativamente
+amplio, la primera vez tuve que usar cinco de 560 Ω en paralelo (= 112
+Ω).
+
+El ejemplo del blinking led lo probaron en un Arduino reemplazando el
+chip o lograron montar un clon completo en el board?
+
+D.
+
+2010/9/26 kalashnikov <a class="moz-txt-link-rfc2396E" href="mailto:kalashnikov@medellinwireless.net">&lt;kalashnikov@medellinwireless.net&gt;</a>:
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt; </span>hola
+<span class="moz-txt-citetags">&gt; </span>no teniamos la resistencia.
+<span class="moz-txt-citetags">&gt; </span>mas links
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-freetext" href="http://arduino.cc/en/Tutorial/ArduinoToBreadboard">http://arduino.cc/en/Tutorial/ArduinoToBreadboard</a>
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-freetext" href="http://arduino.cc/en/Tutorial/ArduinoISP">http://arduino.cc/en/Tutorial/ArduinoISP</a>
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-freetext" href="http://code.google.com/p/mega-isp/">http://code.google.com/p/mega-isp/</a>
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-freetext" href="http://www.arduino.cc/playground/Code/MegaISP">http://www.arduino.cc/playground/Code/MegaISP</a>
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-freetext" href="http://www.arduino.cc/playground/Main/DisablingAutoResetOnSerialConnection">http://www.arduino.cc/playground/Main/DisablingAutoResetOnSerialConnection</a>
+<span class="moz-txt-citetags">&gt; </span>algunas fotos
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-freetext" href="http://www.flickr.com/photos/atarvaneitor/5026705524/">http://www.flickr.com/photos/atarvaneitor/5026705524/</a>
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-freetext" href="http://www.flickr.com/photos/atarvaneitor/5026087487">http://www.flickr.com/photos/atarvaneitor/5026087487</a>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>2010/9/26 Daniel Isaza <a class="moz-txt-link-rfc2396E" href="mailto:isaza.daniel@gmail.com">&lt;isaza.daniel@gmail.com&gt;</a>
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>Yo he evitado el auto reset en mi Arduino usando una resistencia de 110 ~
+<span class="moz-txt-citetags">&gt;&gt; </span>124 Ohm entre RESET y +5v funciona perfecto, ensáyenlo.
+<span class="moz-txt-citetags">&gt;&gt; </span>Saludos
+<span class="moz-txt-citetags">&gt;&gt; </span>D.
+<span class="moz-txt-citetags">&gt;&gt; </span>On Sep 25, 2010, at 10:49 PM, "A. Aguirre" <a class="moz-txt-link-rfc2396E" href="mailto:aaguirr2@gmail.com">&lt;aaguirr2@gmail.com&gt;</a> wrote:
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>Buenas.
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>Hoy, gracias al Arduino de Fede y a un tutorial de la página de Arduino
+<span class="moz-txt-citetags">&gt;&gt; </span>(Using an Arduino as an AVR ISP), kalashnikov y yo logramos quemar el
+<span class="moz-txt-citetags">&gt;&gt; </span>bootloader en varios atmega168, es decir, quedaron listos para ser montados
+<span class="moz-txt-citetags">&gt;&gt; </span>en nuevos clones de Arduino. Comprobamos además cada uno de los chips con el
+<span class="moz-txt-citetags">&gt;&gt; </span>ejemplo del Blinking LED.
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>El procedimiento funcionó bien con el Arduino de Fede, un NG rev. C, pero
+<span class="moz-txt-citetags">&gt;&gt; </span>no logramos hacerlo funcionar con el Diecimila de kalashnikov. No estamos
+<span class="moz-txt-citetags">&gt;&gt; </span>seguros si esto se deba a la función de autoreset del Arduino Diecimila.
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>El tutorial de conversión del Arduino en un programador AVR puede
+<span class="moz-txt-citetags">&gt;&gt; </span>accederse desde la página principal a través de Learning &gt; Examples &gt;
+<span class="moz-txt-citetags">&gt;&gt; </span>Arduino as ISP Programmer.
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>Saludos,
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>A. Aguirre
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt;&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt;&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt;&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt;&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt;&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt;&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+<span class="moz-txt-citetags">&gt;&gt;</span>
+</pre></blockquote><pre wrap>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+</pre></blockquote><pre wrap>
+
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></div></body>
+</html>
+</table></div>

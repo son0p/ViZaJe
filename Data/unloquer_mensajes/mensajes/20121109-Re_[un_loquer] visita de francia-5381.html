@@ -1,0 +1,130 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] visita de francia</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] visita de francia</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>Pierre <minutpapillon@gmail.com></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>09/11/12 09:55</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+al momento, por los streams :
+data = OSC messages (control, text)
+audio,video = icecast2 streams
+
+• puedes encontrar algunos how-to guides en :
+<a class="moz-txt-link-freetext" href="http://wiki.theartcollider.org/inout/doc">http://wiki.theartcollider.org/inout/doc</a>
+• ex. para hacer screen capture (sent on the network) on os x:
+<a class="moz-txt-link-freetext" href="http://wiki.theartcollider.org/tools/oggzcap">http://wiki.theartcollider.org/tools/oggzcap</a>
+• ex. para enviar live mic/webcam from browser: <a class="moz-txt-link-freetext" href="http://theartcollider.org/flex/">http://theartcollider.org/flex/</a>
+• command line tools: <a class="moz-txt-link-freetext" href="http://wiki.theartcollider.org/inout/usage">http://wiki.theartcollider.org/inout/usage</a>
+
+no sé si es lo mismo ahora, pero hace 2 años, habia un "vocabulario"
+OSC para eligir/cambiar de stream, un poco como:
+/osc/inout/me/hola-yo-soy 87.12.12.34
+/osc/inout/me/tengo-video 87.12.12.34/icecast-video
+/osc/inout/me/tengo-audio 87.12.12.34/icecast-audio
+    (arriving on network)
+/osc/inout/other/here-is-video 132.12.17.34/icecast2stream
+    (you can accept the stream from a randomly choosen other)
+/osc/inout/me/quiero-otro
+    (or ask for another...)
+
+pierre
+
+2012/11/9 federico lopez <a class="moz-txt-link-rfc2396E" href="mailto:jardincosmico@gmail.com">&lt;jardincosmico@gmail.com&gt;</a>:
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>On 11/08/2012 11:15 PM, Pierre wrote:
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>gracias por el recibimiento !
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>me presento un poco...
+<span class="moz-txt-citetags">&gt;&gt; </span>soy un ingeniero frances, lleguando en Medellin hace muy poco
+<span class="moz-txt-citetags">&gt;&gt; </span>voy a quedarme aqui (cerca de la c3p!) por 6/7 meses...
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>trabajé en Paris con artistas digitales, sobre:
+<span class="moz-txt-citetags">&gt;&gt; </span>1) <a class="moz-txt-link-abbreviated" href="http://www.theartcollider.org">www.theartcollider.org</a>
+<span class="moz-txt-citetags">&gt;&gt; </span>realtime network de artistas que se mandan en vivo audio/video/text
+<span class="moz-txt-citetags">&gt;&gt; </span>streams
+</pre></blockquote><pre wrap>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>Hola Pierre, Bienvenido
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>una pregunta, ¿Qué protocolo/aplicación usan para comunicar a los artistas
+<span class="moz-txt-citetags">&gt; </span>en theartcollider?
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>federico
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt; </span>2) <a class="moz-txt-link-abbreviated" href="http://www.iannix.org">www.iannix.org</a>
+<span class="moz-txt-citetags">&gt;&gt; </span>opensource software, allowing to build 2d/3d scores of simple objects
+<span class="moz-txt-citetags">&gt;&gt; </span>(mainly: points &amp; curves)
+<span class="moz-txt-citetags">&gt;&gt; </span>then you can use "playback" segments (as many as you want).. which are
+<span class="moz-txt-citetags">&gt;&gt; </span>going to move within the 2d/3d space, and "activate" the points/curves
+<span class="moz-txt-citetags">&gt;&gt; </span>"activating"
+<span class="moz-txt-citetags">&gt;&gt; </span>.... means sending OSC/MIDI messages over the network
+<span class="moz-txt-citetags">&gt;&gt; </span>.... can also mean modifying the score en vivo !
+<span class="moz-txt-citetags">&gt;&gt; </span>it is used to control many third party applications at the same time
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>i'll be glad to exchange/talk about those projects...
+<span class="moz-txt-citetags">&gt;&gt; </span>y tambien escuchar mas de lo que vosotros estan haciendo !
+<span class="moz-txt-citetags">&gt;&gt; </span>opendata ? <a class="moz-txt-link-freetext" href="http://www.mysociety.org/international/alaveteli/">http://www.mysociety.org/international/alaveteli/</a> ?
+<span class="moz-txt-citetags">&gt;&gt; </span>collaborative mapping ? <a class="moz-txt-link-abbreviated" href="http://www.ushahidi.com">www.ushahidi.com</a> ?
+<span class="moz-txt-citetags">&gt;&gt; </span>appoyos a local/social periodismo ?
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>nos vemos !
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>Pierre
+<span class="moz-txt-citetags">&gt;&gt; </span>310 745 5150
+<span class="moz-txt-citetags">&gt;&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:pierre.jdlf@gmail.com">pierre.jdlf@gmail.com</a>
+<span class="moz-txt-citetags">&gt;&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:minutpapillon@gmail.com">minutpapillon@gmail.com</a>
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>2012/11/8 kalashnikov <a class="moz-txt-link-rfc2396E" href="mailto:kalashnikov@otrabanda.org">&lt;kalashnikov@otrabanda.org&gt;</a>:
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>hola
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>me informan que hoy en la mañana se acerco a c3p
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>pierre  <a class="moz-txt-link-freetext" href="http://jdlf.info/p/">http://jdlf.info/p/</a>
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>buscando específicamente a unloquer ......
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>hay en la pagina esta el correo
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>pa invitarlo al asado satelital  :D
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt;&gt;&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+<span class="moz-txt-citetags">&gt;&gt;&gt;</span>
+</pre></blockquote><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt;&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt;&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt;&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+<span class="moz-txt-citetags">&gt;&gt;</span>
+</pre></blockquote><pre wrap>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></blockquote><pre wrap>
+
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></div></body>
+</html>
+</table></div>

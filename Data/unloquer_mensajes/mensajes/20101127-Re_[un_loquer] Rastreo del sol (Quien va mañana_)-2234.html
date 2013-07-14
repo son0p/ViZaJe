@@ -1,0 +1,153 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] Rastreo del sol (Quien va mañana?)</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] Rastreo del sol (Quien va mañana?)</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>Daniel Isaza <isaza.daniel@gmail.com></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>27/11/10 15:14</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+Hola
+
+Una forma de hacer un sistema de tracking fácil, que se usaba mucho en
+robótica BEAM (BEAM Headbots) es utilizar un par de fotodiodos o
+fototransistores o fotorresistencias, todos funcionan bien, la idea es
+que si la lectura de ambos "sensores" de luz es igual, o sea si
+estamos mirando directamente a la fuente de luz no hay necesidad de
+hacer correcciones, si por el contrario la lectura de ambos sensores
+tiene alguna diferencia, el circuito envía una señal al motor(es) para
+hacer las corrercciones necesarias hasta igualar los datos. Es muy
+sencillo, y si funcionaba bien con estos circuitos analógicos, con un
+Arduino implementarlo debe ser mil veces mas fácil. Todo esto sin
+necesidad de cámaras ni procesar imagenes ni computadores.
+
+Si se requiere hacer tracking en dos ejes solo hay que duplicar el
+circuito empleando otro motor en el otro eje. Aqui hay un video de un
+headbot con dos ejes:
+
+<a class="moz-txt-link-freetext" href="http://www.youtube.com/watch?v=uc1oPShY3XQ">http://www.youtube.com/watch?v=uc1oPShY3XQ</a>
+
+Pero para efectos prácticos, me parece exagerado hacer un tracking del
+sol en dos ejes (Alt-Az), es mucho más fácil hace una montura
+ecuatorial sencilla (tipo barndoor), solo se requiere un eje con rosca
+y un motor de paso o servo, alinearla y hacer tracking en un solo eje,
+si mucho habrá necesidad de hacer correcciones en otro eje a lo largo
+del año.
+
+Montura "barndoor"
+
+<a class="moz-txt-link-freetext" href="http://www.google.com.co/images?q=barn%20door%20mount&amp;oe=utf-8&amp;rls=org.mozilla:en-US:official&amp;client=firefox-a&amp;um=1&amp;ie=UTF-8&amp;source=og&amp;sa=N&amp;hl=es&amp;tab=wi&amp;biw=1909&amp;bih=1038">http://www.google.com.co/images?q=barn%20door%20mount&amp;oe=utf-8&amp;rls=org.mozilla:en-US:official&amp;client=firefox-a&amp;um=1&amp;ie=UTF-8&amp;source=og&amp;sa=N&amp;hl=es&amp;tab=wi&amp;biw=1909&amp;bih=1038</a>
+
+
+Saludos
+
+
+Daniel
+
+
+2010/11/27 kalashnikov <a class="moz-txt-link-rfc2396E" href="mailto:kalashnikov@medellinwireless.net">&lt;kalashnikov@medellinwireless.net&gt;</a>:
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt; </span>hola
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>no recuerdo si dije camara, pero con una fotoresistencia es mas sencillo
+<span class="moz-txt-citetags">&gt; </span>supongo
+<span class="moz-txt-citetags">&gt; </span>:D
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>2010/11/27 Federico Lopez <a class="moz-txt-link-rfc2396E" href="mailto:jardincosmico@gmail.com">&lt;jardincosmico@gmail.com&gt;</a>
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>No puedo ir pues ando de viaje, sin embargo he pensado bastante en lo
+<span class="moz-txt-citetags">&gt;&gt; </span>que se adelantò el sabado pasado al mover ese motor via arduino ..
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>Aaguirre y Brolin lograron mover un motor y entender un poco como
+<span class="moz-txt-citetags">&gt;&gt; </span>funciona la cosa.
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>Estoy usando unos espejos para mejorar la luz y subir la temperatura
+<span class="moz-txt-citetags">&gt;&gt; </span>del garaje donde hicimos el asado satelital .. y veo un potencial uso
+<span class="moz-txt-citetags">&gt;&gt; </span>de espejos moviles para  oficina, pieza, sotano etc. serìa chevre
+<span class="moz-txt-citetags">&gt;&gt; </span>poder lograr hacer el tracking solar .. es hora de sacar todos esos
+<span class="moz-txt-citetags">&gt;&gt; </span>piñones del VHS que hay malo, yo ya tengo una estructurita hecha en
+<span class="moz-txt-citetags">&gt;&gt; </span>PVC que soporta el espejo .. me falta pensar como adaptar los piñones
+<span class="moz-txt-citetags">&gt;&gt; </span>a un "pistòn" que empuje el espejo a la velocidad que el sol va
+<span class="moz-txt-citetags">&gt;&gt; </span>recorriendo el horizonte.. hay otro movimiento que es el horizontal
+<span class="moz-txt-citetags">&gt;&gt; </span>que es de menos recorrido y ese se puede corregir manualmente por
+<span class="moz-txt-citetags">&gt;&gt; </span>ahora ..
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>si se logra que el motor vaya empujando un piston que tenga unos 40
+<span class="moz-txt-citetags">&gt;&gt; </span>cms de recorrido estarìa hecho, regreso el martes y seguimos
+<span class="moz-txt-citetags">&gt;&gt; </span>pensandole.
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>fede-
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>PD:kalashnikov propuso un sistema de rastreo mas sofisticado con una
+<span class="moz-txt-citetags">&gt;&gt; </span>camarita que siga el sol y mande las coordenadas al motor .. ese puede
+<span class="moz-txt-citetags">&gt;&gt; </span>ser un reto chevre que podria tener mas aplicaciones.
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>2010/11/26 brolin . <a class="moz-txt-link-rfc2396E" href="mailto:brolin108@gmail.com">&lt;brolin108@gmail.com&gt;</a>:
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt; &gt; </span>Como hacemos para pasarte las llaves?
+<span class="moz-txt-citetags">&gt;&gt; &gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; &gt; </span>2010/11/26 A. Aguirre <a class="moz-txt-link-rfc2396E" href="mailto:aaguirr2@gmail.com">&lt;aaguirr2@gmail.com&gt;</a>
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt; </span>Yo voy.
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt; </span>A. Aguirre.
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt; </span>El 26 de noviembre de 2010 22:13, brolin . <a class="moz-txt-link-rfc2396E" href="mailto:brolin108@gmail.com">&lt;brolin108@gmail.com&gt;</a>
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt; </span>escribió:
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;&gt; </span>Yo no puedo ir pero tengo las llaves. Quien va yo se las llevo a algún
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;&gt; </span>lugar.
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;&gt; </span>--
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;&gt; </span>b
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;&gt;</span>
+</pre></blockquote><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+<span class="moz-txt-citetags">&gt;&gt; &gt;&gt;</span>
+</pre></blockquote><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt; &gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; &gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; &gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt;&gt; &gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt;&gt; &gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt;&gt; &gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+<span class="moz-txt-citetags">&gt;&gt; &gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; &gt;</span>
+</pre></blockquote><pre wrap>
+<span class="moz-txt-citetags">&gt;&gt;</span>
+<span class="moz-txt-citetags">&gt;&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt;&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt;&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt;&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></blockquote><pre wrap>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt; </span>_______________________________________________
+<span class="moz-txt-citetags">&gt; </span>unloquer mailing list
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+<span class="moz-txt-citetags">&gt;</span>
+<span class="moz-txt-citetags">&gt;</span>
+</pre></blockquote><pre wrap>
+
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></div></body>
+</html>
+</table></div>

@@ -1,0 +1,47 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] xset dpms</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] xset dpms</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>alejo d <alejoduque@gmail.com></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>10/02/10 13:09</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+linea sola de video:
+sudo mplayer -demuxer rawvideo -rawvideo w=800:h=600:format=rgb32
+/dev/disk/by-path/pci-0000:00:09.0-scsi-0:0:0:0-part5 -vo sdl -zoom
+
+del rc.lua en /etc/xdg/awesome/rc.lua
+-- Start some applications (lo sumo yo)
+os.execute("urxvt -e irssi &amp;")
+-- }}}
+
+sumamos esto para la pantalla prendida todo el tiempo:
+-- Start some applications (lo sumo yo)
+os.execute("urxvt xset s off -dpms")
+-- }}}
+
+y esto para los loops eternos:
+#!/usr/bin/env bash
+while true;
+do sudo cat /dev/mem &gt; /dev/dsp
+done;
+
+
+viola!!!
+
+
+
+
+On Wed, Feb 10, 2010 at 12:28 AM, alejo <a class="moz-txt-link-rfc2396E" href="mailto:alejoduque@gmail.com">&lt;alejoduque@gmail.com&gt;</a> wrote:
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt; </span><a class="moz-txt-link-freetext" href="http://how-to.wikia.com/wiki/How_to_turn_off_XScreenSaver_and_DPMS_while_watching_videos">http://how-to.wikia.com/wiki/How_to_turn_off_XScreenSaver_and_DPMS_while_watching_videos</a>
+<span class="moz-txt-citetags">&gt;</span>
+</pre></blockquote><pre wrap>
+
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></div></body>
+</html>
+</table></div>

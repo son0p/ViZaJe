@@ -1,0 +1,54 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: beep</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: beep</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>&quot;brolin .&quot; &lt;brolin108@gmail.com&gt;</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>03/02/10 09:21</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-html"  lang="x-western">Softbeep -- <a href="http://0pointer.de/lennart/projects/softbeep/">http://0pointer.de/lennart/projects/softbeep/</a><br><br>Podría funcionar. No lo he ensayado<br>--<br>b<br><br><div class="gmail_quote">On Mon, Feb 1, 2010 at 10:34 PM, alejo d <span dir="ltr">&lt;<a href="mailto:alejoduque@gmail.com">alejoduque@gmail.com</a>&gt;</span> wrote:<br>
+<blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">pilla la de python, suena como un 8bits.. hay que hacer unas mas y<br>
+ponerlas segun procesos, horas, dias, estados.<br>
+<br>
+<br>
+---------- Forwarded message ----------<br>
+From: alejo d &lt;<a href="mailto:alejoduque@gmail.com">alejoduque@gmail.com</a>&gt;<br>
+Date: Tue, Jan 26, 2010 at 11:42 AM<br>
+Subject: Re: beep<br>
+To: alejo d &lt;<a href="mailto:alejoduque@gmail.com">alejoduque@gmail.com</a>&gt;<br>
+<br>
+<br>
+beep -n -f 1500 -l 1000 -n 200 -l 500<br>
+<br>
+#############################################################<br>
+#############################################################<br>
+#!/usr/bin/env python<br>
+<br>
+import os<br>
+<br>
+#tunes for beeporama: (frequence,duration)<br>
+tune1=[(1000,320),(900,10),(500,410),(400,10),(340,410),(300,10)]<br>
+tune2=[(1000,10),(500,10),(440,20),(340,2),(720,4),(880,40)]<br>
+<br>
+tune=tune2<br>
+<br>
+cmd=&#39;beep -f100 -l1 &#39;<br>
+<br>
+for i,j in tune:<br>
+       cmd=cmd + &#39; -n -f &#39;+ str(i) + &#39; -l&#39;+str(j)<br>
+<br>
+os.system(cmd)<br>
+<br>
+#############################################################<br>
+#############################################################<br>
+<br>
+<br>
+<br>
+<br>
+On Mon, Jan 25, 2010 at 9:37 PM, alejo d &lt;<a href="mailto:alejoduque@gmail.com">alejoduque@gmail.com</a>&gt; wrote:<br>
+&gt; <a href="http://malditonerd.wordpress.com/2008/09/07/pelotudeando-con-beep-beep2/" target="_blank">http://malditonerd.wordpress.com/2008/09/07/pelotudeando-con-beep-beep2/</a><br>
+&gt;<br>
+</blockquote></div><br>
+
+</div></body>
+</html>
+</table></div>

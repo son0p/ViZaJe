@@ -1,0 +1,56 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] pd con el coro</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] pd con el coro</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>danielgomezmarin@gmail.com</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>09/07/11 11:12</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>&quot;hackerspace medellin&quot; &lt;unloquer@lists.aktivix.org&gt;</td></tr></table><br>
+<div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+Hey apenas puedo responder aca va:
+donde se ve que solo aumenta la onda del lado izquierdo y del lado derecho casi no se altera,esto es normal? es por el micrófono? que representa esa onda 
+El lado izquierdo son las frecuencias bajas. Lo que hace el patch es analizar la señal y ofrecer información de las amplitudes en diferentes rangos de frecuencias. 
+
+Si lo que se mueve es lo mas a la izquierda es porque estan entrando frecuencias bajas. Mientras mas agudas entonces se verà mas elevada la parte derecha de la liniecita.
+
+El asunto con los 4 tipos de voces:
+Las voces tienen 4 rangos donde se mueven. Idealmente uno podría hacer el filtro que dice fede, de tal manera que uno pudiera medir la actividad de cada una de ellas independiente.
+
+Lo que se puede hacer es revisar (con un buen micro y con muy poca distancia hacia los cantantes) cada tipo de voz que sector del espectro afecta.
+Ejemplo: decirle a quien cante en el registro mas bajo que cante un poco y mirar la gráfica en que punto se abulta. Y hacer lo mismo con quien cante en el siguiente registro mas agudo y volver a mirar la gràfica. Lo mas probable es que la gràfica se abulte en un punto un poco mas a la derecha. Si seguimos con la mas aguda, el resultado serà similar: se verà aun mas a la derecha.
+
+La idea es entonces relacionar la actividad de ciertas regiones de la gràfica con cierto registro.
+Ejemplo: si el tercer y el cuarto valor de la lista de números que se generan es mayor que 0.7 (osea que los puntos 3 y 4 de la gràfica son los mas abultados) entonces es la voz X la que está activa y tiene tal amplitud ( por ejemplo el promedio entre el tercer y cuarto valor)
+
+Y así sucesivamente.
+
+En resumen: tener un buen micro + cerca de los cantantes + cantar en el centro de un registro y analizar lo que pasa + cantar en el otro registro y analizar lo que pasa+ lo que observemos debe ser distinto para cada uno de los registros + esa distinción es nuestra herramienta para distinguir entre un registro y otro.
+
+Espero que esto ayude. Si no porfavor me escriben otra vez.
+Un abrazo
+
+D
+
+
+
+
+Enviado desde un dispositivo BlackBerry® de Tigo
+
+-----Original Message-----
+From: kalashnikov <a class="moz-txt-link-rfc2396E" href="mailto:kalashnikov@otrabanda.org">&lt;kalashnikov@otrabanda.org&gt;</a>
+Sender: <a class="moz-txt-link-abbreviated" href="mailto:unloquer-bounces@lists.aktivix.orgDate">unloquer-bounces@lists.aktivix.orgDate</a>: Wed, 6 Jul 2011 00:18:29 
+To: hackerspace medellin<a class="moz-txt-link-rfc2396E" href="mailto:unloquer@lists.aktivix.org">&lt;unloquer@lists.aktivix.org&gt;</a>
+Reply-To: hackerspace medellin <a class="moz-txt-link-rfc2396E" href="mailto:unloquer@lists.aktivix.org">&lt;unloquer@lists.aktivix.org&gt;</a>
+Subject: [un/loquer] pd con el coro
+
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></div></body>
+</html>
+</table></div>

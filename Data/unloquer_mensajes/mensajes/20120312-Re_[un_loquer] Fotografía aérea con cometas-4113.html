@@ -1,0 +1,383 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] Fotografía aérea con cometas</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] Fotografía aérea con cometas</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>Eliette Restrepo <elietterestrepo@gmail.com></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>12/03/12 02:46</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-html"  lang="x-western"><p>Hola! Qué nota, gracias brolin.</p><p><br></p><p>fede</p><p>---no tengo experiencia con fotos de éste tipo. Creo que una posibilidad es calcarla igual a como se hace con el OSM, otra posibilidad sería convertir los valores digitales de cada pixel a valores de reflectancia, pero dudo éste caso pues para ésto se requiere conocer la posición del sol y otras condiciones climáticas que son difíciles de identificar a &#39;ojo&#39;. <br>
+
+</p><p>La ventaja de trabajar con imágenes de Landsat es que por cada imagen viene un paquete de 8 &#39;imagenes&#39; que pertenecen a diferentes bandas del espectro electromagnético, que se ven en principio como fotos blanco y negro, en éste punto uno puede diferenciar fácilmente zonas verdes de superficies artificiales...la teoría es la misma que se encuentra en la presentacion que envió Camilo, para nivel caminadores acá: <a href="http://landsat.gsfc.nasa.gov/education/compositor/pdfs/Landsat_7_Compositor.pdf">http://landsat.gsfc.nasa.gov/education/compositor/pdfs/Landsat_7_Compositor.pdf</a>. Para nivel párvulos acá <a href="http://zulu.ssc.nasa.gov/mrsid/tutorial/Landsat%20Tutorial-V1.html">http://zulu.ssc.nasa.gov/mrsid/tutorial/Landsat%20Tutorial-V1.html</a><br>
+
+</p><p> Además, en el paquete viene incluído un archivo de información de metadatos con la posición del sol, la fecha y la hora en la que fue capturada la imagen, entonces los cálculos de reflectancia y corrección atmosférica son automáticos. <br>
+
+</p><p>----Los puntos de referencia en tierra se usan para refinar los resultados dependiendo de lo que se desee analizar. Las imágenes de Landsat 7 tienen resolución de 30m (la térmica es de 60m y la pancromática de 15m). <br>
+
+</p><p>En mi caso, quiero ver diferentes tipos de cultivos, por ejemplo: piña y guadua. Es posible que en las fotos blanco y negro e incluso en las diferentes combinaciones de Rojo Verde y Azul (RGB) los vea igual (del mismo color), entonces, se hace uso de la información de reflectancia, que se obtiene del número digital de cada pixel, para saber exactamente si son diferentes. La firma espectral (reflectancia) de cada objeto es diferente a la de otro, como una huella digital. GRASS GIS me muestra que son diferentes, pero no me dice si son piñas, entonces, con la información en tierra puedo asignar esa clase que me dice GRASS en determinado punto a la clase de cultivo que yo vi en tierra. Lo interesante de hacer ésto es que puedo después extrapolar ésos resultados a una zona mucho más grande, pues la firma espectral del cultivo será siempre la misma (si las condiciones de crecimiento -época del año, atmosféricas y de iluminación de la imagen son las mismas)...Espero que se entienda un poco, sino, por fis levanten la mano y vuelvo a explicar con otras palabras.</p>
+
+<p> Los puntos de referencia se toman con un GPS, pueden ser tan simples como:</p><p>(latitud, longitud) = piña. <br></p><p>Así se hace una lista con las coordenadas de los puntos y lo que uno ve. Voy a consultar ésto en más detalle para saber exactamente cómo se haría en éste caso en el que hay edificios; por ejemplo, cuántos metros a la redonda debo ver para identificar ése punto como determinada clase?, buena pregunta fede...vuelvo a escribir al respecto cuando tenga una mejor respuesta.</p>
+
+<p>Alguien tiene las coordenadas del lugar? Cualquier punto es bueno. Quisiera descargar una imagen y tratar de experimentar un poco.</p><p>Eliette</p><p>[frank-eistein][cometas][aereo][convergentes][datos][globo][grassgis][toro][agenciaaeroespacial]<br>
+
+</p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p>Lo interesante de trabajar con las de Landsat es que viene un paquete de 8 fotos, 7 pertenecen a diferentes bandas del espectro electromagnético, </p>
+
+
+<div class="gmail_quote">On Mar 11, 2012 5:54 PM, &quot;federico lopez&quot; &lt;<a href="mailto:jardincosmico@gmail.com" target="_blank">jardincosmico@gmail.com</a>&gt; wrote:<br type="attribution"><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+
+
+<u></u>
+
+  
+    
+    
+  
+  <div text="#000000" bgcolor="#ffffff">
+    Lo que expresa brolin  es la idea inicial de la loma, que para
+    efectos de este correo, es solo el detonante...<br>
+    <br>
+    Creo que el tema a fertilizado otras áreas fascinantes para
+    un/loquer y seguro para ConVerGentes.<br>
+    <br>
+    Viendolo bien tenemos una lista de equiziteses estéticas y técnicas.<br>
+    La belleza de los objetos voladores que no puedo evitar relacionar
+    con la obra que hizo eliana &amp;co en el Parque Arví [1],<br>
+    lo poético que implica la Agencia Aeroespacial de la Loma, y el
+    flujo de datos que se pueden exprimir de las técnicas de Camilo y
+    Eliette a partir de las fotos.<br>
+    <br>
+    La policía de medellín tenía un helicóptero de patrulla aérea, por
+    mi casa pasó unas 3 veces hasta que imagino que le cortaron el
+    presupuesto, a veces visajeaban poniendo una sirena, lo que me
+    asombró fue escuchar lo potente y nítido de la sirena desde el aire,
+    entonces emitir sonido desde el aire puede ser muy eficiente.<br>
+    <br>
+     Con la paciencia de la costura, hilemos todo eso para ver el
+    Frank-Eistein que sale de mirar desde el cielo con intenciones
+    no-militares.<br>
+    <br>
+    Supongo que mínimo podemos sacar el porcentaje de zona verde de los
+    barrios.<br>
+    <br>
+    <br>
+    varias preguntas:<br>
+    <br>
+    - Eliette .. <br>
+    --¿Qué tipo de datos obtenemos si metemos las fotos de la loma[2] a
+    GRASS GIS? (lo pueden descargar acá [3], sive en linux)<br>
+    --¿Cómo se toman bien y de que sirven los puntos de referencia en
+    tierra?<br>
+    <br>
+    <br>
+    Camilo dice que la cometa halaba como un toro, ya esa imágen se me
+    hace muy divertida.<br>
+    <br>
+    --¿Cómo resolvieron lo de la fuerza del toro? en la loma tienen
+    problemas con eso.<br>
+    --¿Los datos obtenidos pueden generar XML o CSV?<br>
+    <br>
+    <br>
+    fede.<br>
+[frank-eistein][cometas][aereo][convergentes][datos][globo][grassgis][toro][agenciaaeroespacial]<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    [1] <a href="http://www.flickr.com/photos/bell_tran/5724309962/" target="_blank">http://www.flickr.com/photos/bell_tran/5724309962/</a><br>
+[2]<a href="http://convergentes.hiperbarrio.org/files/2011/10/6278643589_7617ff0e60_z.jpg" target="_blank">http://convergentes.hiperbarrio.org/files/2011/10/6278643589_7617ff0e60_z.jpg</a><br>
+    [3]<a href="http://grass.fbk.eu/download/index.php" target="_blank">http://grass.fbk.eu/download/index.php</a><br>
+    <br>
+    On 03/11/2012 11:13 AM, brolin . wrote:
+    <blockquote type="cite">Hola E! <br>
+      <br>
+      la idea con esas fotografias es convertirlas luego en cartografía
+      en un formato libre con el software de OpenStreetMaps[1]. Este
+      funciona calcando las imàgenes y subiendo esa información al
+      servidor del OSM; es como un wiki donde la gente mapea de manera
+      colaborativa.<br>
+      <br>
+      La Loma es tal vez la zona de Medellín que mejor esta mapeada[2]<br>
+      <br>
+      Saludos,<br>
+      -<br>
+      b<br>
+      <br>
+      [1] <a href="http://josm.openstreetmap.de/" target="_blank">http://josm.openstreetmap.de/</a><br>
+      [2] <a href="http://www.openstreetmap.org/?lat=6.271022&amp;lon=-75.629101&amp;zoom=18&amp;layers=M" target="_blank">http://www.openstreetmap.org/?lat=6.271022&amp;lon=-75.629101&amp;zoom=18&amp;layers=M</a><br>
+      <br>
+      <div class="gmail_quote">2012/3/11 Eliette Restrepo <span dir="ltr">&lt;<a href="mailto:elietterestrepo@gmail.com" target="_blank">elietterestrepo@gmail.com</a>&gt;</span><br>
+        <blockquote class="gmail_quote" style="margin:0pt 0pt 0pt 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
+          <p>Hola muchach@s,</p>
+          <p>Cuál es la idea con las fotos? Ahorita estoy haciendo el
+            trabajo de grado en un tema parecido, para una zona en Costa
+            Rica.<br>
+            La idea es saber qué clases de cultivos hay en la zona.
+            Teniendo en cuenta que las fotos aéreas son muy caras lo que
+            se hizo fue bajar imágenes tomadas por el Landsat 7 de aquí
+            <a href="http://glovis.usgs.gov/" target="_blank">http://glovis.usgs.gov/</a>, éstas son
+            gratis. Luego, caminando por la zona se hizo una lista de
+            puntos de referencia con las coordenadas, aquí se usó un
+            GPS. <br>
+            Finalmente se analizaron las imágenes con un software GIS,
+            yo lo hice con GRASS GIS, que es libre :), y se hace algo
+            que se llama &#39;clasificación supervisada&#39; o &#39;no supervisada&#39;
+            para saber si se puede ver lo que uno quiere ver, en nuestro
+            caso, no pudimos ver los diferentes tipos de cultivos
+            jejejej, pero parece ser que fue por que los puntos de
+            referencia que se tomaron en tierra no fueron adecuados...no
+            estoy segura de ésto, todavía estoy concluyendo :)</p>
+          <p>Cuéntenme si ésta es una opción y le puedo explicar mejor a
+            la persona encargada, como hacer el procesamiento de las
+            imágenes en detalle y todo lo demás, también me ofrezco para
+            hacerlo, solo tendrían que mandarme los datos de los puntos
+            de referencia en tierra y esperarme 2 semanas hasta que
+            acabe el trabajo de grado.Y si me saco una buena nota,
+            también les mando el trabajo :)</p>
+          <p>[mapping]<br>
+          </p>
+          <p>Saludos,<br>
+            Eliette</p>
+          <div>
+            <div>
+              <div class="gmail_quote">On Mar 10, 2012 8:26 PM, &quot;Juan
+                Camilo Mejía&quot; &lt;<a href="mailto:camilosw@gmail.com" target="_blank">camilosw@gmail.com</a>&gt;
+                wrote:<br type="attribution">
+                <blockquote class="gmail_quote" style="margin:0pt 0pt 0pt 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
+                  Brolin, hace unos años trabajé en un proyecto con
+                  imágenes aéreas y utilizábamos un globo o una cometa
+                  según el clima. Lo malo es que no tengo muchas fotos
+                  del montaje que hicimos. En esta presentación hay
+                  algunas imágenes del montaje, de la cometa y algunas
+                  de las fotos aéreas que tomamos <a href="http://dl.dropbox.com/u/2071126/CorreccionIluminacion.pdf" target="_blank">http://dl.dropbox.com/u/2071126/CorreccionIluminacion.pdf</a>
+                  <div>
+                    <br>
+                  </div>
+                  <div>El proyecto consistía en detectar enfermedades en
+                    plantaciones de banano con imágenes aéreas, pero por
+                    esa época fue que se cayó el precio del dolar y el
+                    proyecto no pudo continuar.</div>
+                  <div><br>
+                  </div>
+                  <div>
+                    El equipo que hicimos tenía un control remoto de
+                    aeromodelismo para mover la cámara y tomar la foto y
+                    un transmisor de video con una cámara análoga para
+                    ver desde tierra como iva a quedar la foto. En una
+                    de las fotos de la presentación está el control
+                    remoto con el receptor de video y con un televisor
+                    portatil. La cometa que usamos jalaba como un toro y
+                    tocaba usar un arnés para sostenerla. Voy a seguir
+                    buscando a ver si encuentro más fotos para
+                    mostrarles.</div>
+                  <div><br>
+                  </div>
+                  <div>Esta página es una de las que consulté en esa
+                    época cuando diseñamos el equipo 
+                    <a href="http://arch.ced.berkeley.edu/kap/kaptoc.html" target="_blank">http://arch.ced.berkeley.edu/kap/kaptoc.html</a> El
+                    man recomienta estos dos tipos de cometas <a href="http://arch.ced.berkeley.edu/kap/equip/softkite.html" target="_blank">http://arch.ced.berkeley.edu/kap/equip/softkite.html</a> y <a href="http://arch.ced.berkeley.edu/kap/equip/softkite.html" target="_blank">http://arch.ced.berkeley.edu/kap/equip/softkite.html</a>.
+                    Nosotros probamos con una delta y una flowform y la
+                    que mejor resultados nos dio fue la segunda.</div>
+                  <div><br>
+                  </div>
+                  <div>Cualquier cosa me preguntan.</div>
+                  <div><br>
+                  </div>
+                  <div>Nos vemos</div>
+                  <div><br>
+                    <div class="gmail_quote">2012/3/10 brolin . <span dir="ltr">&lt;<a href="mailto:brolin108@gmail.com" target="_blank">brolin108@gmail.com</a>&gt;</span><br>
+                      <blockquote class="gmail_quote" style="margin:0pt 0pt 0pt 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">Ey Alejo!<br>
+                        <br>
+                        estuve viendo videos de fotos hechas con cometas
+                        y se ve muy posible. Además de lo caro del Helio
+                        ... Gabriel dice <br>
+                        <br>
+                        &quot;<span>Aplazado el Balloon Mapping de mañana en
+                          Estación Suramericana del Metro para el
+                          próximo Domingo 18 de marzo a las 8:00a.m.
+                          Cuando llueve el helio se comporta mal, debido
+                          al clima de Medellín.&quot;</span><br>
+                        <br>
+                        Mañana domingo no hay balloon mapping.<br>
+                        <br>
+                        Suerte<br>
+                        <div class="gmail_quote">2012/3/9 kdag <span dir="ltr">&lt;<a href="mailto:funkzvv@gmail.com" target="_blank">funkzvv@gmail.com</a>&gt;</span><br>
+                          <blockquote class="gmail_quote" style="margin:0pt 0pt 0pt 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">ei
+                            brolin, yo insistiría en investigar la ruta
+                            de la cometa.. el helio<br>
+                            es cada vez mas caro y escaso ... las
+                            cometas son tradición y pues<br>
+                            bastante mas estables que un globo (a los
+                            vientos).<br>
+                            bueno, es un comentario que dejo aquí en el
+                            hilo ya que cuando lo<br>
+                            lance en el lugar no pareció tener aun la
+                            respuesta.. y tal vez<br>
+                            alguien aquí si la tenga.<br>
+                            <br>
+                            saludos a la loma y buena ruta al espacio
+                            para convergentes!<br>
+                            /alejo<br>
+                            <br>
+                            2012/3/8  &lt;<a href="mailto:unloquer-request@lists.aktivix.org" target="_blank">unloquer-request@lists.aktivix.org</a>&gt;:<br>
+                            &gt; Envíe los mensajes para la lista
+                            unloquer a<br>
+                            &gt;        <a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+                            &gt;<br>
+                            &gt; Para subscribirse o anular su
+                            subscripción a través de la WEB<br>
+                            &gt;        <a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+                            &gt;<br>
+                            &gt; O por correo electrónico, enviando un
+                            mensaje con el texto &quot;help&quot; en<br>
+                            &gt; el asunto (subject) o en el cuerpo a:<br>
+                            &gt;        <a href="mailto:unloquer-request@lists.aktivix.org" target="_blank">unloquer-request@lists.aktivix.org</a><br>
+                            &gt;<br>
+                            &gt; Puede contactar con el responsable de
+                            la lista escribiendo a:<br>
+                            &gt;        <a href="mailto:unloquer-owner@lists.aktivix.org" target="_blank">unloquer-owner@lists.aktivix.org</a><br>
+                            &gt;<br>
+                            &gt; Si responde a algún contenido de este
+                            mensaje, por favor, edite la<br>
+                            &gt; linea del asunto (subject) para que el
+                            texto sea mas especifico que:<br>
+                            &gt; &quot;Re: Contents of unloquer digest...&quot;.
+                            Además, por favor, incluya en la<br>
+                            &gt; respuesta sólo aquellas partes del
+                            mensaje a las que está<br>
+                            &gt; respondiendo.<br>
+                            &gt;<br>
+                            &gt;<br>
+                            &gt; Asuntos del día:<br>
+                            &gt;<br>
+                            &gt;   1. Lanzamiento de globos -
+                            BalloonMapping Domingo 11 de      Marzo<br>
+                            &gt;      (brolin .)<br>
+                            &gt;<br>
+                            &gt;<br>
+                            &gt;
+                            ----------------------------------------------------------------------<br>
+                            &gt;<br>
+                            &gt; Message: 1<br>
+                            &gt; Date: Wed, 7 Mar 2012 12:59:28 -0500<br>
+                            &gt; From: &quot;brolin .&quot; &lt;<a href="mailto:brolin108@gmail.com" target="_blank">brolin108@gmail.com</a>&gt;<br>
+                            &gt; To: hackerspace medellin &lt;<a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a>&gt;<br>
+                            &gt; Subject: [un/loquer] Lanzamiento de
+                            globos - BalloonMapping Domingo 11<br>
+                            &gt;        de      Marzo<br>
+                            &gt; Message-ID:<br>
+                            &gt;        &lt;<a href="mailto:CA%2BfqtL_qObWPgT9c4KDO%2B%2BRrtYQ5aCH0z_GhFqt1_kNyzHB%2BEw@mail.gmail.com" target="_blank">CA+fqtL_qObWPgT9c4KDO++RrtYQ5aCH0z_GhFqt1_kNyzHB+Ew@mail.gmail.com</a>&gt;<br>
+
+
+
+                            &gt; Content-Type: text/plain;
+                            charset=&quot;iso-8859-1&quot;<br>
+                            &gt;<br>
+                            &gt; Hola,<br>
+                            &gt;<br>
+                            &gt; los chicos de Convergentes van tomar
+                            foto aéreas el domingo, la invitación<br>
+                            &gt; está abierta a quien quiera participar.
+                            Ellos salen a las 7AM :S desde la<br>
+                            &gt; loma(Van pal centro) pero pa&#39; los que
+                            nos les queramos pegar mas abajo nos<br>
+                            &gt; podemos vemos a las 8AM en la estación
+                            Suramericana del metro.<br>
+                            &gt;<br>
+                            &gt; Este es un video de la última salida en
+                            la comuna 13<br>
+                            &gt; <a href="http://www.youtube.com/watch?v=RyIy9619C7s" target="_blank">http://www.youtube.com/watch?v=RyIy9619C7s</a><br>
+                            &gt;<br>
+                            &gt; Otra cosa, están cortos de recursos
+                            para los lanzamientos (ya no hacen<br>
+                            &gt; parte de Hiperbarrio! :D) entonces
+                            pasaran con la mochila en cuarquiel<br>
+                            &gt; momento ... lleve billetico de 5mil o
+                            10mil si le queda fácil; sino no<br>
+                            &gt; importa.<br>
+                            &gt;<br>
+                            &gt; Saludos,<br>
+                            &gt; --<br>
+                            &gt; Brolin<br>
+                            &gt; ------------ próxima parte ------------<br>
+                            &gt; Se ha borrado un adjunto en formato
+                            HTML...<br>
+                            &gt; URL: &lt;<a href="https://lists.aktivix.org/pipermail/unloquer/attachments/20120307/a3de8699/attachment-0001.html" target="_blank">https://lists.aktivix.org/pipermail/unloquer/attachments/20120307/a3de8699/attachment-0001.html</a>&gt;<br>
+
+
+
+                            &gt;<br>
+                            &gt; ------------------------------<br>
+                            &gt;<br>
+                            &gt;
+                            _______________________________________________<br>
+                            &gt; unloquer mailing list<br>
+                            &gt; <a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+                            &gt; <a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+                            &gt;<br>
+                            &gt;<br>
+                            &gt; Fin de Resumen de unloquer, Vol 39,
+                            Envío 7<br>
+                            &gt;
+                            *******************************************<br>
+                            <br>
+_______________________________________________<br>
+                            unloquer mailing list<br>
+                            <a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+                            <a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+                          </blockquote>
+                        </div>
+                        <br>
+                        <br>
+                        _______________________________________________<br>
+                        unloquer mailing list<br>
+                        <a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+                        <a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+                        <br>
+                      </blockquote>
+                    </div>
+                    <br>
+                  </div>
+                  <br>
+                  _______________________________________________<br>
+                  unloquer mailing list<br>
+                  <a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+                  <a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+                  <br>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <br>
+          _______________________________________________<br>
+          unloquer mailing list<br>
+          <a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+          <a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+          <br>
+        </blockquote>
+      </div>
+      <br>
+      <pre><fieldset></fieldset>
+_______________________________________________
+unloquer mailing list
+<a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a>
+<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre>
+    </blockquote>
+  </div>
+
+<br>_______________________________________________<br>
+unloquer mailing list<br>
+<a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+<br></blockquote></div>
+
+</div><BR><FIELDSET CLASS="mimeAttachmentHeader"></FIELDSET><BR/><div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></div></body>
+</html>
+</table></div>

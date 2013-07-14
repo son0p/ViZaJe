@@ -1,0 +1,55 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] Fwd: Un/Loquer - Otraparte</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] Fwd: Un/Loquer - Otraparte</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>Kleper <kl3p3r@gmail.com></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>04/11/12 03:39</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">CC: </div>Fernando Giraldo Montoya &lt;ferchosur@gmail.com&gt;</td></tr></table><br>
+<div class="moz-text-html"  lang="x-western">Hola,<br><div class="gmail_extra"><br><br><div class="gmail_quote">El 3 de noviembre de 2012 20:36, Santiago Gaviria <span dir="ltr">&lt;<a href="mailto:sgaviria@gmail.com" target="_blank">sgaviria@gmail.com</a>&gt;</span> escribió:<br>
+
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Saludos,<div><br></div><div>Se logró hoy el primer enlace de larga distancia entre dos NanoStation M2, uno en mi casa, el otro donde Kleper a 1300 mts, la señal en 82%. </div>
+
+<div>La latencia está en 2ms en promedio, lo cual es muy bueno. Se hizo una transferencia de un archivo de 6MB vía ssh, transfirió a 200K/s, lo cual no es tan bueno.</div>
+<div><br></div></blockquote><div><br></div><div>Parte de este problema de latencia y de la velocidad se debe al tipo de protocolo y a la forma como se hizo el enlace, WDS suele limitar bastante el ancho de banda, teóricamente cuando se tenga andando un protocolo MESH el ancho de banda subirá un poco, aunque por la misma definición de los protocolos 802.11 (b/g/n) no me esperaría mas de 800k/s aunque eso ya es muy bueno</div>
+
+<div> </div><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div></div><div>Se necesita más experiencia y conocimiento con los routers, unos estamos muy crudos, hay gente q sabe más, si alguien es uno désos, está muy invitado a colaborar. Gracias a Fernando Giraldo por el acompañamiento, gracias a brolin, Diego, Kleper, kalash y mi persona por el trabajo hasta hoy.</div>
+
+
+<div><br></div></blockquote><div><br></div><div>Con gusto les puedo ayudar compartiendoles la experiencia que tengo en el asunto, de lo que vi hoy y del enlace que hicieron creo que se puede mejorar mucho, cambiando el tipo de enlace, de protocolo y haciendo un diseño de red, me apunto para ayudar con el diseño de red.</div>
+
+<div><br></div><div> </div><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div></div><div>Pero además de montar los routers hay otras necesidades ...</div><div><br></div>
+
+<div>1. Un diseño gráfico básico para el portal de contenido, que inicialmente está en WordPress. Hay un pequeño presupuesto para esto. No sé quién cercano a Un/loquer es diseñador gráfico y pueda estar interesado.</div>
+
+<div><br></div><div>2. Experiencia con WordPress. Por ahora lo más urgente es montar una galería de imágenes, pero también mirar qué plugins serían útiles / necesarios.</div><div><br></div><div>3. El Contenido. Hay mucho software open source, juegos en red, documentación, libros, videos, etc .... que hay q poner a rodar ahí. Yo sé de algunos uds conocen muchos más. Empecemos la lista.</div>
+
+
+<div><br></div><div>4. Servidor y Servicios. Instalación del servidor y qué servicios se montan inicialmente ... chat, videoconf, VoIP, almacenamiento, mapas, etc ...</div><div><br></div></blockquote><div><br></div><div>
+
+Puedo ayudar con la parte de servidores (LINUX) y todo el tema de Mapas usando OpenStreetMap y las diferentes herramientas que provee, streaming de audio, video, etc</div><div> </div><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+
+<div></div><div>5. Talleres sobre WordPress y Redes Mesh Libres.</div>
+<div><br></div><div><br></div><div>Los puntos 3 y 4 también se extienden a todas las iniciativas de Redes Libres ... la Loma, MedeLibre, ContinenteContenido, Platohedro ...</div><div><br></div><div>Pregunta para Federico y Fernando que están trabajando en otras redes ... es importante que pensemos desde ya en la inter-operabilidad de las redes? Si es así, habrá q decidir cuál firmware.</div>
+
+
+<div><br></div></blockquote><div><br></div><div>Sobre este punto, creo que lo ideal es tratar de compilar el Firmware que usa PotatoMesh que es &quot;OpenWRT Based&quot; en un firmware que se pueda instalar en los Ubiquiti NanoStationM2 de Otraparte, y algunos router de otro estilo como Linksys basado en atheros y los viejos y clasicos Linksys basados en Broadcom, yo creo que es posible compilar un firmware que al menos sea interoperable entre las diferentes redes e iniciativas que hay en este momento, que se use le protocolo MESH B.A.T.M.A.N o lograr un port o una buena aplicación de las ultimas versiones de OLSR, aunque personalmente creo que B.A.T.M.A.N tiene mayor desarrollo y mayor comunidad detras en el momento por lo cual sera mas fácil conseguir soporte y documentación.</div>
+
+<div><br></div><div>Un consejo que les doy desde mi experiencia es que no pierdan tiempo configurando redes en WDS o enlaces punto a punto, creo que es importante, al menos por la urgencia de algunos proyectos enfocarse en el tema de las redes MESH, y los protocolos actuales se pueden implementar.</div>
+
+<div><br></div><div>Saludos,</div><div><br></div><div>Kleper</div><div><br></div><div> </div><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div></div><div>Así va esto por ahora.</div>
+
+<span class="HOEnZb"><font color="#888888"><div><br></div><div>Santiago</div>
+</font></span><br>_______________________________________________<br>
+unloquer mailing list<br>
+<a href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a><br>
+<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+<br></blockquote></div><br></div>
+
+</div><BR><FIELDSET CLASS="mimeAttachmentHeader"></FIELDSET><BR/><div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></div></body>
+</html>
+</table></div>

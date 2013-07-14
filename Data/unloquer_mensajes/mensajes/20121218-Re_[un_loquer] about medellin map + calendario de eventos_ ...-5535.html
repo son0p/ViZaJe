@@ -1,0 +1,184 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] about medellin map + calendario de eventos, ...</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] about medellin map + calendario de eventos, ...</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>Santiago Gaviria <sgaviria@gmail.com></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>18/12/12 13:22</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-html"  lang="x-western">Hola Pierre, tal vez olvidaste agregar esto ...<div><br></div><div><a href="https://github.com/pierrejdlf/memap/blob/master/client/app/views/MainView.js#L5">https://github.com/pierrejdlf/memap/blob/master/client/app/views/MainView.js#L5</a><div>
+<br></div><div>(Maybe you forgot adding lib/mapbox ? Let me know when you check it in)</div><div><br></div><div>Gracias</div><div><br><br><div class="gmail_quote">2012/12/12 Pierre <span dir="ltr">&lt;<a href="mailto:minutpapillon@gmail.com" target="_blank">minutpapillon@gmail.com</a>&gt;</span><br>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">@paula: <a href="http://timeline.verite.co/" target="_blank">http://timeline.verite.co/</a> es hermosa.. intentaré poner la encima/abajo...<div>
+<br><div>hablando de JSON, como lo dice bien Santiago</div><div>por ex. : <a href="http://82.66.96.183:8080/api/events" target="_blank">http://82.66.96.183:8080/api/events</a> .... da la lista de los eventos</div>
+
+<div>(hecha por ember.js servido por node.js ... tambien se puede añadir eventos haciendo POST por la misma API)</div><div><br></div><div>por el intercambio de datos, creo que un componente interessante podria ser un -nuve-google-spreadsheet-</div>
+
+
+<div>que se puede al mismo tiempo:</div><div>- llenar desde un JSON (from facebook search/events API ? from an existing google calendar ?)</div><div>- llenar desde automatic scraping from other website (from dirty-quericomedellin ?)</div>
+
+
+<div>- llenar/modificar manualmente (para limpiar datos + agregar datos que no existen)</div></div><div><br></div><div>... y al final producir un JSON perfecto &gt; usado en cualquier application/sitio web</div><div><br>
+
+</div>
+<div>cervezita/discussion este fin de semana ? eligen el dia, estoy libre !</div><div><br></div><div>ppp</div><div class="HOEnZb"><div class="h5"><div><br></div><div class="gmail_extra"><br><br><div class="gmail_quote">On Wed, Dec 12, 2012 at 3:33 PM, Santiago Gaviria <span dir="ltr">&lt;<a href="mailto:sgaviria@gmail.com" target="_blank">sgaviria@gmail.com</a>&gt;</span> wrote:<br>
+
+
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">algo como ...<div><br></div><div>{ &quot;eventos&quot;: [</div><div>    { </div><div>      &quot;nombre&quot;: &quot;Viejoteca pa Diciembre&quot;,</div>
+
+
+<div>      &quot;descripcion&quot;: ...</div><div>       ...</div><div>
+      &quot;location&quot;: [5.039939393,-76.00838383] // Latitud Longitud</div><div>    },</div><div>    {</div><div>      // otro evento</div><div>    },</div><div><div>    {</div><div>      // .. y otro</div><div>    }</div>
+
+
+
+</div><div><br></div><div>  ]</div><div>}<br><br>si no se tiene el lat lon, con la dirección puede hacerse geocoding si está bien escrita, es decir convertir una dirección a un lat lon.<div><div><br><br><br><div class="gmail_quote">
+
+
+
+On Wed, Dec 12, 2012 at 3:28 PM, federico lopez <span dir="ltr">&lt;<a href="mailto:jardincosmico@gmail.com" target="_blank">jardincosmico@gmail.com</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+
+
+
+<br>
+y el JSON debe tener un formato particular? o una simple lista separada por comas?<div><br>
+<br>
+<br>
+<br>
+On 12/12/2012 03:24 PM, Santiago Gaviria wrote:<br>
+</div><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div>
+&#39;q buena idea fede. simplemente hacés una interfaz web (URL) q retorne<br>
+la consulta en un JSON.<br>
+<br>
+es exactamente lo mismo q hacer una página sólo q en vez de retornar<br>
+HTML retornás JSON.<br>
+<br>
+por ejemplo <a href="http://agendaemergente.com/api/eventos" target="_blank">http://agendaemergente.com/<u></u>api/eventos</a> -&gt; retorna JSON con<br>
+eventos<br>
+<br>
+On Wed, Dec 12, 2012 at 3:20 PM, federico lopez &lt;<a href="mailto:jardincosmico@gmail.com" target="_blank">jardincosmico@gmail.com</a><br></div><div>
+&lt;mailto:<a href="mailto:jardincosmico@gmail.com" target="_blank">jardincosmico@gmail.<u></u>com</a>&gt;&gt; wrote:<br>
+<br>
+    Muy buen trabajo!<br>
+<br>
+    a propósito de tomar los datos de otras agendas, que bueno aprender<br>
+    a hacer una API simple para agendaemergente, alguien sabes cómo<br>
+    puedo dar acceso externo a una consulta en el  MysQl?<br>
+<br>
+    fede.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    On 12/12/2012 01:39 PM, Pierre wrote:<br>
+<br>
+        buenos dias-tarde-noche !<br>
+        (pardon pour la longueur du courrier)<br>
+<br>
+        as i like mixing time and space (i like<br></div>
+        <a href="http://timemap.googlecode.com/__svn/tags/2.0.1/examples/basic___tl230.html" target="_blank">http://timemap.googlecode.com/<u></u>__svn/tags/2.0.1/examples/<u></u>basic___tl230.html</a><br>
+        &lt;<a href="http://timemap.googlecode.com/svn/tags/2.0.1/examples/basic_tl230.html" target="_blank">http://timemap.googlecode.<u></u>com/svn/tags/2.0.1/examples/<u></u>basic_tl230.html</a>&gt;)<div><br>
+
+<br>
+        i was experimenting with :<br>
+        node.js / ember.js / mapbox.js / google maps API<br>
+        to build a simple map with geolocalised events (as list)<br>
+        you can see it here, its very simple:<br>
+<br>
+        <a href="http://82.66.96.183:8080/" target="_blank">http://82.66.96.183:8080/</a> (please do not public-share url)<br></div>
+        src : <a href="https://github.com/pierrejdlf/__memap" target="_blank">https://github.com/pierrejdlf/<u></u>__memap</a><div><div><br>
+        &lt;<a href="https://github.com/pierrejdlf/memap" target="_blank">https://github.com/<u></u>pierrejdlf/memap</a>&gt;<br>
+<br>
+        please test it and tell me what you think<br>
+        when an event is added, location name is geolocated by<br>
+        googlemapsAPI....<br>
+        but page needs refresh<br>
+        events rows + marker on map are &quot;rollover/click-linked&quot;<br>
+<br>
+        i was also thinking about fetching/scraping events from<br>
+        (i did not try <a href="http://agendaemergente.org" target="_blank">agendaemergente.org</a> &lt;<a href="http://agendaemergente.org" target="_blank">http://agendaemergente.org</a>&gt;<br>
+        &lt;<a href="http://agendaemergente.org" target="_blank">http://agendaemergente.org</a>&gt; :)<br>
+<br>
+        . quericomedellin<br>
+        . ciudadseisgrados<br>
+        . miradaurbana<br>
+        . tuciuidadalternativa<br>
+        . ...<br>
+<br>
+        but most of them have variable structure of html ... preventing<br>
+        automatic scraping+parsing of events<br>
+        (for info., using :<br>
+             . <a href="http://scraperwiki.com" target="_blank">http://scraperwiki.com</a> (python)<br>
+             . google speadsheet (parseHTML function)<br>
+             . google Refine (fetch by url)<br>
+             . chrome addon &quot;Sraper&quot;<br>
+        )<br>
+<br>
+        ... so, i guess the only way to populate the list is doing<br>
+        it manually, adding events one by one (or by batch using well<br>
+        formatted<br>
+        manual spreadsheet)<br>
+<br>
+        what do you think ?<br>
+        quien quiere unas cervezitas mientras discutando de eso ?<br>
+        shall we use it manually, expanding poco-a-poco la red de gente que<br>
+        añaden infos ?<br>
+        shall we transform it to show other datos (brolin!) ?<br>
+<br>
+        señoritas y señoritos, buen provecho<br>
+<br>
+        <a href="mailto:pierre.jdlf@gmail.com" target="_blank">pierre.jdlf@gmail.com</a> &lt;mailto:<a href="mailto:pierre.jdlf@gmail.com" target="_blank">pierre.jdlf@gmail.com</a>&gt;<br></div></div>
+        &lt;mailto:<a href="mailto:pierre.jdlf@gmail.com" target="_blank">pierre.jdlf@gmail.com</a> &lt;mailto:<a href="mailto:pierre.jdlf@gmail.com" target="_blank">pierre.jdlf@gmail.com</a>&gt;<u></u>&gt;<br>
+<br>
+        ++<br>
+<br>
+<br>
+        ______________________________<u></u>___________________<br>
+        unloquer mailing list<br>
+        <a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a> &lt;mailto:<a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.<u></u>aktivix.org</a>&gt;<br>
+        <a href="https://lists.aktivix.org/__mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/__<u></u>mailman/listinfo/unloquer</a><br>
+        &lt;<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/<u></u>mailman/listinfo/unloquer</a>&gt;<br>
+<br>
+<br>
+    ______________________________<u></u>___________________<br>
+    unloquer mailing list<br>
+    <a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a> &lt;mailto:<a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.<u></u>aktivix.org</a>&gt;<br>
+    <a href="https://lists.aktivix.org/__mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/__<u></u>mailman/listinfo/unloquer</a><div><br>
+    &lt;<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/<u></u>mailman/listinfo/unloquer</a>&gt;<br>
+<br>
+<br>
+<br>
+<br>
+______________________________<u></u>_________________<br>
+unloquer mailing list<br>
+<a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/<u></u>mailman/listinfo/unloquer</a><br>
+<br>
+</div></blockquote><div><div>
+<br>
+______________________________<u></u>_________________<br>
+unloquer mailing list<br>
+<a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/<u></u>mailman/listinfo/unloquer</a><br>
+</div></div></blockquote></div><br></div></div></div>
+<br>_______________________________________________<br>
+unloquer mailing list<br>
+<a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+<br></blockquote></div><br></div>
+</div></div><br>_______________________________________________<br>
+unloquer mailing list<br>
+<a href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a><br>
+<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+<br></blockquote></div><br></div></div>
+
+</div><BR><FIELDSET CLASS="mimeAttachmentHeader"></FIELDSET><BR/><div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></div></body>
+</html>
+</table></div>

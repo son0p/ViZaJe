@@ -1,0 +1,74 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] Concierto</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] Concierto</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>danielgomezmarin@gmail.com</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>15/09/11 00:44</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>&quot;hackerspace medellin&quot; &lt;unloquer@lists.aktivix.org&gt;</td></tr></table><br>
+<div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+Hey Camilo
+Que bien que trabajés en esa dirección.
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt;</span>Antes de seguir con lo visual, estoy haciendo una clase que permite analizar el audio
+</pre></blockquote><pre wrap>
+
+El parchesito de PD que hice hace esactamente eso. No se si es con el que estabas trabajando.
+
+</pre><blockquote type=cite style="color: #000000;"><pre wrap>
+<span class="moz-txt-citetags">&gt;</span>Por el momento, permite ver la transformada de fourier normal, la versión suavizada y el máximo por cada banda. Además, se puede seleccionar una banda (toca en el código por el momento) y graficarla.
+</pre></blockquote><pre wrap>
+
+De nuevo, esto es esactamente lo que hace el parche de PD con el que estaban trabajando.
+
+Hay que tener cuidado con varias cosas:
+1. Que tan grande es la ventana que vas a usar para analizar el audio? Acordate que el tamaño de la ventana y el tiempo de reacción son inversamente proporcionales. El tamaño de la ventana es proporcional a la 'gravedad' de las frecuencias que quiero medir. El tamaño de la ventana es proporcional a la exactitud en frecuencias que logro con mi anàlisis.
+
+2. Lo anterior nos hace  pensar en que una aplicación genérica (con una sola transformada) debe ser hecha muy a la medida del audio que vamos a analizar.
+
+3. Los picos instantàneos son interesantes si queremos hacer un efecto de 'ecualizador gráfico', pero que tal medir la velocidad con la que cambian ciertas bandas? O incluso la acelerción? Que tal si le aplicamos una envolvente ( reacciona muy ràpido al inicio y decae suavemente) a los picos de esas tres variables en cada banda?
+
+4. Una banda no necesariamente es significativa de un 'sonido'. (Eso lo discutimos con kalashnkov) un sonido excita muchas bandas de manera proporcional a la frecuencia 'fundamental' (si es que la hay <span class="moz-smiley-s1" title=":)"><span>:)</span></span> ) y en una banda puede haber información de muchos sonidos al mismo tiempo.
+
+5. Tal vez la aplicación debe ser muy 'a la medida' del audio que se vaya a analizar. Es probable que análisis paralelos con diferentes ventanas sean un complemento interesante.
+
+6. Muy buena la idea de tener varias fuentes de audio para no tener el problema de un espectro confuso (P.ej: un micro que graba muchos sonidos distintos)
+ Pero una tarjeta desonido 'normal' tiene dos entradas, entonces estamos en problemas de nuevo.
+
+Conclusión:
+Si tenemos sonidos de percusiòn que estàn afinados en el mismo tono, podemos hacer un anàlisis que nos permita encontrar las bandas que este sonido influencia y usarlas para detectar 'ese' sonido esactamente usando la sumatoria de las bandas excitadas. Y esto puede hacerse para cada sonido usando el mismo anàlisis con la misma ventana (o varios con ventanas diferentes especiales de acuerdo con el sonido. 
+
+Con instrumentos melódicos el análisis se hace muchísimo mas complejo.
+
+Hay una unidad llamada MFCC (mel frequency coefficient) que han comprobado que está muy relacionada con la percepción del timbre en los humanos. La manera de calcular el mfcc de un audio es sencilla, se basa en fourier y puede ser imementada para tener un análisis un poco mas 'humano'. Seguro hay muchas librerïas que ya implementan los mfcc que pueden tener buenos resultados.
+
+Estoy interesado en seguir esta exploración. Mañana en la tarde tengo tiempo. Si alguien se le mide podemos profundizar y hacer un sensor de audio mas avanzado.
+
+Saludos
+
+D
+
+
+
+
+
+Enviado desde un dispositivo BlackBerry® de Tigo
+
+-----Original Message-----
+From: Juan Camilo Mejía <a class="moz-txt-link-rfc2396E" href="mailto:camilosw@gmail.com">&lt;camilosw@gmail.com&gt;</a>
+Sender: <a class="moz-txt-link-abbreviated" href="mailto:unloquer-bounces@lists.aktivix.orgDate">unloquer-bounces@lists.aktivix.orgDate</a>: Wed, 14 Sep 2011 23:29:55 
+To: hackerspace medellin<a class="moz-txt-link-rfc2396E" href="mailto:unloquer@lists.aktivix.org">&lt;unloquer@lists.aktivix.org&gt;</a>
+Reply-To: hackerspace medellin <a class="moz-txt-link-rfc2396E" href="mailto:unloquer@lists.aktivix.org">&lt;unloquer@lists.aktivix.org&gt;</a>
+Subject: Re: [un/loquer] Concierto
+
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></div></body>
+</html>
+</table></div>

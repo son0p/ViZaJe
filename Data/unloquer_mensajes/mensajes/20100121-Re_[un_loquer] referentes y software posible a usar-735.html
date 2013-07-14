@@ -1,0 +1,62 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] referentes y software posible a usar</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] referentes y software posible a usar</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>daniel gomez <danielgomezmarin@gmail.com></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>21/01/10 08:09</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-html"  lang="x-western">Hey <br>no entiendo muy bien lo qyue está pasando. visité la página de bios pero no encuentro info. Todo lo que he leido se ve muy emocionante y seguro me gustaría prtaicipar, pero no se hacia donde va. Se que s e han reunido dos veces, pero no he podido ir motivo trabajo :S<br>
+<br>Me pueden dar un update o remitirme a algun lugar donde este la info?<br><br>Por otro lado: Tengo listo un nuevo objeto que controla la entrada de notas MIDI al PD limitada por una variable que se llama &quot;polifonía&quot; esto es bien porque ayuda a economizar procesos y es una alternativa al objeto nativo [poly]. Ya la incluiré en los nuevos sintetizadores.<br>
+<br>Sobre enviar datos de audio por la red. Alguna vez pensé e implementé una alternativa que sea esta: en vez de enviar datos de forma de onda o de fourier, porque no usar un mismo sintetizador en cada uno de los dos lados. Si es así, los datos para enviar por segundo se reducen hasta un 99%. Claro que solo funciona para enviar sonidos y axdemás es limitado para el tipo de sintetizador que se ha iplementado. Cuando lo hice era mandando datos OSC a través de una red local. Por la red abierta es dificil, porque algunos ISP no dejan pasar OSC ni concetar una máquina con otra a través de la red. Pero vale la pena volver a intentar.<br>
+NO se si esto es fuera del tema. :)<br><br>Saludos<br><br>D<br><br><div class="gmail_quote">2010/1/21 alejo <span dir="ltr">&lt;<a href="mailto:alejoduque@gmail.com">alejoduque@gmail.com</a>&gt;</span><br><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
+pensando en la integracion de otros aparatos, aca un ejemplo sencillo (incluye codigo):<br>
+<a href="http://metabiosis.goto10.org/2008/03/25/dot-matrix-patterns/" target="_blank">http://metabiosis.goto10.org/2008/03/25/dot-matrix-patterns/</a><br>
+<br>
+programa para pasar jack-bytes por la red:<br>
+<a href="https://code.goto10.org/viewcvs/index.cgi/jackbytes/trunk/server/README?view=markup" target="_blank">https://code.goto10.org/viewcvs/index.cgi/jackbytes/trunk/server/README?view=markup</a><br>
+(This method is NOT suitable for exchanging sound stream data directly for playing, that is one reason why JACK was developed in the first place!  It just sends the current snapshot of  the sound stream,or its Fourier transform,  for further processing by a non-Jack application.)<br>
+
+<br>
+mode+v<br>
+<a href="https://code.goto10.org/hg/index.cgi/mode+v/file/d7d593fd4dc8/README" target="_blank">https://code.goto10.org/hg/index.cgi/mode+v/file/d7d593fd4dc8/README</a><br>
+An IRC based collaborative music platform.<br>
+<br>
+&quot;screensavers&quot;(?) esto corre on python:<br>
+<a href="http://tinkerhouse.net/shoebot/screenshots/" target="_blank">http://tinkerhouse.net/shoebot/screenshots/</a><br>
+<br>
+<br>
+acerca de mandar comandos via cron a pd:<br>
+<blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
+<br>
+echo &quot;foo bla bla&quot; | nc -u host Pdportfornetreceive<br>
+</blockquote>
+<br>
+<blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;">
+Probably cron doesn&#39;t find the binaries. Either export all PATHes or<br>
+specify absolute pathes for all files/binaries:<br>
+* * * * * /bin/echo &quot;foo bla;&quot; | /usr/local/bin/pdsend 3007 localhost<br>
+</blockquote>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+_______________________________________________<br>
+unloquer mailing list<br>
+<a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+</blockquote></div><br>
+
+</div><BR><FIELDSET CLASS="mimeAttachmentHeader"></FIELDSET><BR/><div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></div></body>
+</html>
+</table></div>

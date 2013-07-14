@@ -1,0 +1,102 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] Rehabilitación vocacional / Aplicaciones</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] Rehabilitación vocacional / Aplicaciones</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>federico lopez <jardincosmico@gmail.com></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>14/01/12 13:49</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-flowed" style="font-family: -moz-fixed; font-size: 12px;" lang="x-western">
+<br>
+<br>On 12/24/2011 11:09 PM, brolin . wrote:
+<br><blockquote type=cite style="color: #000000;">
+<br>Después de varias conversaciones, lecturas, reflexiones,
+<br>blablablablabla ... llegamos a la conclusión de que las opciones de
+<br>carreras académicas no está diseñadas para satisfacer nuestra propia
+<br>curiosidad, deberíamos inventarnos algo como "diseñe su propia
+<br>carrera" donde podemos escoger materias como "esoterismo I",
+<br>"matemáticas discretas" y "preparación de cerveza". Que los títulos
+<br>obtenidos sean algo como "ingenieria
+<br>socio-etno-electro-agricultorótica con énfasis en psicodelia"
+<br>
+<br>No se, se nos ocurre un proyecto llamado "Rehabilitación vocacional"
+<br>
+<br>una plataforma que te permita seguir estos cursos, una universidad
+<br>donde usted escoja los cursos según sus curiosidades.
+<br>
+<br>
+<br></blockquote>
+<br>Supongamos queremos coordinar un taller, eso tiene varios 
+requerimientos, que pueden ser manejados fácilmente en un intercambio de 
+correos y algunos documentos de texto, ahora supongamos que tenemos que 
+coordinar 5 talleres, la cosa empieza a ser un poco mas compleja&nbsp; .. 
+pensemos en 200,&nbsp; en&nbsp; mil talleres.
+<br>
+<br>Un/loquer puede hacer una aplicación que tenga herramientas para 
+coordinar talleres, Un/loquer puede usar esa herramienta y puede ofrecer 
+esa herramienta como servicio a terceros, ademas puede entregar el 
+código fuente para que los más roots los instalen en sus propios servidores.
+<br>
+<br>Para que hacer esto si existe Remine, Trac, Project Manger?
+<br>Se me ocurren algunas:
+<br>1. Hacer usable la info que circula por Un/loquer ha sido una tradición.
+<br>2. Queremos aprender de programación Web.
+<br>3. Nuestra info esta regada en varios sitios y no es facilmente 'usable'.
+<br>4. el sitio Web de Un/loquer podría pasar de ser un sitio donde uno 
+entra a leer, a un sitio donde uno entra a hacer. (Eliette! hacer, 
+hacer, hacer)
+<br>5. Si hacemos algo bonito y funcional podremos aumentar la reputación de 
+Casa Tres Patios y la nuestra.
+<br>6. Si pones en google "Workshop coordinator app" no salen resultados de 
+algo como lo que imaginamos.
+<br>
+<br>
+<br>
+<br>Hasta aquí es suficiente para el lector afanado .. seguiré con los que 
+van a cavar.
+<br>
+<br>Tratemos de abstraer un taller, sin nombres propios .. entonces tenemos 
+varios genéricos que van a ir VARIANDO ej: $personas, $sitios, 
+$talleres, $moods, etc. y que escribiremos con el prefijo $ para 
+facilidad en la futura escritura del pseudocódigo.
+<br>
+<br>Estas VARIABLES van a relacionarse entre ellas ejerciendo FUNCIONES, ej: 
+mandarInfo(), buscarSitio(), registroFotográfico(), etc. estas Funciones 
+tienen unos atributos, Ej: la Info no se manda sola entonces quiza hay 
+que decir quien va a mandar la info y como hay varios tipos de info, 
+entonces especificar el tipo de info.
+<br>Este caso se podría ver asi:
+<br>
+<br>var $persona = "fede";
+<br>var $mood = "animoso, con tiempo libre";
+<br>var $taller = "Escucha de satelites";
+<br>var $info = "presupuesto";
+<br>
+<br>Function mandarInfo($persona, $info) {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $recipiente =&nbsp; seleccione $persona donde $mood =&nbsp; 'posible 
+aliado financiero';
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Para cada $recipiente {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $persona mandaCorreo $recipiente $this-&gt;$info;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+<br>
+<br>}
+<br>
+<br>Esto dista mucho de ser un código en algún lenguaje, son balbuceos, pero 
+ilustra la idea de una plataforma para el manejo de Talleres donde quien 
+lo use encuentre,
+<br>opciones de talleres que puedo asistir, montar un taller que quiero dar, 
+socializar la convocatoria del taller, los interesados se puedan 
+inscribir, evaluar el taller, poner las memorias&nbsp; del taller,
+<br>
+<br>para no extender el correo .. sigo en el piratepad&nbsp; 
+<a class="moz-txt-link-freetext" href="http://piratepad.net/P2C3GoKvCC">http://piratepad.net/P2C3GoKvCC</a>
+<br>
+<br>
+<br>
+<br>
+<br>_______________________________________________
+<br>unloquer mailing list
+<br><a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<br><a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+<br></div></body>
+</html>
+</table></div>

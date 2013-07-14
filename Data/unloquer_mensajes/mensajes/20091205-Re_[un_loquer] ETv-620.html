@@ -1,0 +1,65 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] ETv</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] ETv</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>alejo <alejoduque@gmail.com></td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>05/12/09 17:18</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-html"  lang="x-western"><html><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space; "><div><br><div><div>On Dec 5, 2009, at 4:26 PM, brolin . wrote:</div><br class="Apple-interchange-newline"><blockquote type="cite">The <b>Ogg</b> transport bitstream </blockquote><div><br></div><div>aka transport layer</div><div><br></div><div>en español: Capa de transporte&nbsp;</div><div><br></div><div>pudiera pensarse como el medio de transporte... los rieles donde se ponen los vagones (paquetes de datos encapsulados son uno de sus posibles contenidos..)</div><div><br></div><div>el protocolo de comunicacion debera tener un sistema que lo sea rapido y efectivo en cuanto a posibles errores de transmicion ademas de permitir hacer busquedas en su estructura... esto es clave en terminos de edicion de video ya que se necesitan cortes muy precisos, pero es una de las grandes fallas del OGG/Theora... transmite bien pero para editar es un problema..</div><div><br></div><div><br></div><div>(ojo usar una tipografia que les permita ver los graficos)&nbsp;</div><div><span class="Apple-style-span" style="font-family: Times; font-size: 16px; "><pre class="newpage" style="font-size: 1em; margin-top: 0px; margin-bottom: 0px; page-break-before: always; ">
+   The following diagram shows a schematic example of a media mapping
+   using Ogg and grouped logical bitstreams:
+
+          logical bitstream with packet boundaries
+ -----------------------------------------------------------------
+ &gt; |       packet_1             | packet_2         | packet_3 |  &lt;
+ -----------------------------------------------------------------
+
+                     |segmentation (logically only)
+                     v
+
+      packet_1 (5 segments)          packet_2 (4 segs)    p_3 (2 segs)
+     ------------------------------ -------------------- ------------
+ ..  |seg_1|seg_2|seg_3|seg_4|s_5 | |seg_1|seg_2|seg_3|| |seg_1|s_2 | ..
+     ------------------------------ -------------------- ------------
+
+                     | page encapsulation
+                     v
+
+ page_1 (packet_1 data)   page_2 (pket_1 data)   page_3 (packet_2 data)
+------------------------  ----------------  ------------------------
+|H|------------------- |  |H|----------- |  |H|------------------- |
+|D||seg_1|seg_2|seg_3| |  |D|seg_4|s_5 | |  |D||seg_1|seg_2|seg_3| | ...
+|R|------------------- |  |R|----------- |  |R|------------------- |
+------------------------  ----------------  ------------------------
+
+                    |
+pages of            |
+other    --------|  |
+logical         -------
+bitstreams      | MUX |
+                -------
+                   |
+                   v
+
+              page_1  page_2          page_3
+      ------  ------  -------  -----  -------
+ ...  ||   |  ||   |  ||    |  ||  |  ||    |  ...
+      ------  ------  -------  -----  -------
+              physical Ogg bitstream
+
+   In this example we take a snapshot of the encapsulation process of
+   one logical bitstream.  We can see part of that bitstream's
+   subdivision into packets as provided by the codec.  The Ogg
+   encapsulation process chops up the packets into segments.  The
+   packets in this example are rather large such that packet_1 is split
+   into 5 segments - 4 segments with 255 bytes and a final smaller one.
+   Packet_2 is split into 4 segments - 3 segments with 255 bytes and a
+</pre><div><font class="Apple-style-span" face="Helvetica"><span class="Apple-style-span" style="font-size: medium;"><font class="Apple-style-span" face="monospace" size="4"><span class="Apple-style-span" style="font-size: 16px; white-space: pre;"><br></span></font></span></font></div></span></div><div><br></div><div>pff, no se la verdad que tanto se necesite tanta precision.. depende del publico y de ahi la vieja tension que tanto estresa a los ingenieros cuando hablan con alguien que dicese llamar artista, diseñador o especimen de orden inferior.</div><div><br></div><div>la tarea es encontrar el balance</div><div><br></div><div>:)</div><div><br></div><div><br></div><br><blockquote type="cite">is designed to provide framing, error protection and seeking structure for higher-level codec streams that consist of raw, unencapsulated data packets, such as the <a href="http://wiki.xiph.org/Vorbis" title="Vorbis">Vorbis</a> audio codec or <a href="http://wiki.xiph.org/Theora" title="Theora">Theora</a> video codec. <br><br>Como traducirían esto?<br><br>--<br>b<br><br><div class="gmail_quote">2009/12/4 brolin . <span dir="ltr">&lt;<a href="mailto:brolin108@gmail.com">brolin108@gmail.com</a>&gt;</span><br><blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;"> Por fin mas grande --&gt; <a href="http://farm3.static.flickr.com/2632/4157891007_1c9e8bc4ee_b.jpg" target="_blank">http://farm3.static.flickr.com/2632/4157891007_1c9e8bc4ee_b.jpg</a><br><br><div class="gmail_quote">2009/12/4 alejo <span dir="ltr">&lt;<a href="mailto:alejoduque@gmail.com" target="_blank">alejoduque@gmail.com</a>&gt;</span><br> <blockquote class="gmail_quote" style="border-left: 1px solid rgb(204, 204, 204); margin: 0pt 0pt 0pt 0.8ex; padding-left: 1ex;"><div><div></div><div class="h5"><div style="word-wrap: break-word;"><div>ei eliana! ayer no me quedo tiempo para mirar por segunda vez el texto pero si sabia que habian cosas que redundaban, aun las hay pero ya esta mas claro, gracias!</div> <div>(me quedo con esta version + una posible correcion..)</div><div><br></div><div><div><div>On Dec 4, 2009, at 12:39 PM, Eliana Beltrán. wrote:</div><br><blockquote type="cite"><div><div>------</div>remix 1<br> Hoy las diferentes maneras de transmitir parecen enfocar todo en pasar la mayor cantidad de informacion en el menor tiempo (ancho de banda), nos preocupa la misma ecuacion pero queremos ir mas alla y no solo pasar conocimiento sino, ir mas al fondo y compartir el saber hacer.</div> </blockquote><div><br></div></div><div>..en el menor tiempo POSIBLE(?) (ancho de banda). <b><span style="text-decoration: underline;">N</span></b>os preocupa...</div><div><br></div><div>pensaba igualmente que la palabra ecuacion podria ser el grafico del afiche.. no se si de los diagramas de brolin pudiera salir una que representara el problema de meter muchos datos vr compartir saberes...</div> <div><br></div><div>plop! dificil no?</div><div><br></div><div>:D</div><div><br><blockquote type="cite"><div><br></div><div>ETV es un taller que organiza un/loquer, el hackerspace de medellin con la intencion de repensar los contenidos que fluyen en los medios tradicionales y lo mas importante intentar en comunidad aprender a hacer&nbsp; nuestros propios medios rearticulando los que hoy existen&nbsp;sin tener que inventar uno nuevo.<br> -----</div></blockquote></div></div><br><div>ahora, con respecto a la imagen me parece que es muy grande el ET, no se, es solo mi apreciacion ya que desafortunadamente no deja de ser un icono de la caspa holliwodense.. claro, sirve de ejemplo para el caso ya que intentamos comunicarnos con el mas alla.. que es lo que intentaba todo el tiempo el alienijena..</div> <div><br></div><div>podra ser usar una de la imagenes de brolin, si la pasa en mejor resolucion la otra manera de dar el toque grafico a la pieza..&nbsp;</div><div><br></div><div>lo otro seria tambien jugar con los loquers y hacerlos TV's poniendoles antenas.. no se.. o simplemente escalar el ET y dejarlo solo como mini mascota en una esquina.</div> <div><br></div><div>como sea, lo que haces me gusta asi que toma o deja mis opiniones solo como eso.</div><div><br></div><div>:)</div><div><br></div><div><br></div></div><br></div></div><div class="im">_______________________________________________<br> unloquer mailing list<br> <a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br> <a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br> <br></div></blockquote></div><br> </blockquote></div><br> _______________________________________________<br>unloquer mailing list<br><a href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a><br>https://lists.aktivix.org/mailman/listinfo/unloquer<br></blockquote></div><br></div></body></html>
+</div><BR><FIELDSET CLASS="mimeAttachmentHeader"></FIELDSET><BR/><div class="moz-text-plain" wrap=true graphical-quote=true style="font-family: -moz-fixed; font-size: 12px;" lang="x-western"><pre wrap>
+_______________________________________________
+unloquer mailing list
+<a class="moz-txt-link-abbreviated" href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a>
+<a class="moz-txt-link-freetext" href="https://lists.aktivix.org/mailman/listinfo/unloquer">https://lists.aktivix.org/mailman/listinfo/unloquer</a>
+</pre></div></body>
+</html>
+</table></div>

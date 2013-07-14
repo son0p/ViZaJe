@@ -1,0 +1,87 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Re: [un/loquer] reporte de daños</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Re: [un/loquer] reporte de daños</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>&quot;brolin .&quot; &lt;brolin108@gmail.com&gt;</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>12/06/12 19:57</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-html"  lang="x-western">Pues parece que ganamos!!!<br><br>hoy si nos ridió. Configuramos correctamente el dnsmasq en el router, le agregamos la línea address=/#/<a href="http://10.0.0.43">10.0.0.43</a> que significa lo que sea mándelo a la ip 10.0.0.43. También definimos el dominio como laloli.local el hostname del servidor es servidor y el del router es router. Agregamos las líneas respectivas en el /etc/hosts de ambos y walá!<br>
+<br>Bueno, tocó reinstalar elgg para que reconociera &quot;automáticamente&quot; los nuevos hostnames, ya no hay problema con el CSS. Le quitamos la opción para deshabilitar la confirmación por correo electrónico al registrarse un nuevo usuario. Estar pendiente de el plugin site-access a ver si sale una actualización para última versión de elgg. (<a href="http://community.elgg.org/pg/plugins/release/63879/developer/shellcode/site-access">http://community.elgg.org/pg/plugins/release/63879/developer/shellcode/site-access</a>)<br>
+<br>También atendimos nuestra primera consulta, a María preguntando si era posible conectar una webcam directamente a un monitor VGA (Le dimos algunas opciones de como podría resolver su problema)<br><br>##### Configuración router #######<br>
+
+      Additional DNSMasq Options<br>
+      address=/#/<a href="http://10.0.0.43">10.0.0.43</a><br>CONFIGURACIONES:<br>Servidor de elgg<br><div style="margin-left:40px">ip: 10.0.0.43<br>hostname: servidor<br>domain: laloli.local<br>gw: 10.0.0.1<br></div><br>
+AP dlink<br><div style="margin-left:40px">ip: <a href="http://10.0.0.1/24">10.0.0.1/24</a><br>gw: 10.0.0.1<br>local dns: 10.0.0.1<br>router name: laloli<br>hostname: router<br>domain: laloli.local<br>SSID: laloli<br></div>
+<div style="margin-left:40px">##### Configuración router #######<br>      Additional DNSMasq Options<br>      address=/#/<a href="http://10.0.0.43">10.0.0.43</a><br></div><br><br>Saludos,<br>-<br>brolin<br><br><div class="gmail_quote">
+2012/6/9 Diego Tobon <span dir="ltr">&lt;<a href="mailto:diegot@gmx.net" target="_blank">diegot@gmx.net</a>&gt;</span><br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+El martes 12 yo caigo a las 4 si alguien va y hacemos un mini curso con ejemplos de IPv4<div><br></div><div>PD: confirmar si va estar alguien temprano <br><br><div class="gmail_quote">2012/6/9 brolin . <span dir="ltr">&lt;<a href="mailto:brolin108@gmail.com" target="_blank">brolin108@gmail.com</a>&gt;</span><div>
+<div class="h5"><br>
+
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Sorprendentemente revivió el router dlink.<br><br>Esta batalla ya está tomando mucho tiempo, yo creo que nos tocó leer. <a href="http://wndw.net/pdf/wndw3-es/wndw3-es-ebook.pdf" target="_blank">wndw.net/pdf/wndw3-es/wndw3-es-ebook.pdf</a><br>
+
+
+
+<br>Tratamos de entender en que consiste el DNS y de que van las IP y las netmask en las redes de computadores.<br><br>Saludos<br><br><div class="gmail_quote">2012/6/8 brolin . <span dir="ltr">&lt;<a href="mailto:brolin108@gmail.com" target="_blank">brolin108@gmail.com</a>&gt;</span><div>
+
+
+<div><br>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Que hay pa&#39; dañar? Nos vemos hoy a las 10AM en C3P<div><div><br><br><div class="gmail_quote">
+2012/6/6 federico lopez <span dir="ltr">&lt;<a href="mailto:jardincosmico@gmail.com" target="_blank">jardincosmico@gmail.com</a>&gt;</span><br>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">+--------------+<br>
+|  Puntaje     |<br>
++--------------+<br>
++----------+---+<br>
+|un/loquer | 0 |<br>
++----------+---+<br>
+| Ip man   | 3 |<br>
++----------+---+<br>
+<br>
+<br>
+Este fenómeno hostil es objeto de una condición que debería<br>
+llamar la atención de #reHab.<br>
+<br>
+Así ayer al arrullo del trueno lejano dimos de baja el<br>
+router que Kalashnikov tenía mas avanzado en el ingrato<br>
+intento de apoyar la intrépida red de La Loma.<br>
+<br>
+En medio de charlas de Drum Machines, y atizar el<br>
+fulgor de Stencil malibù para que se presente a Altavoz,<br>
+abandonamos la orbita del portal cautivo y encendimos<br>
+los propulsores para elevarnos a la orbita del DNS.<br>
+<br>
+DNS (Domain Name Server) es quien se encarga de<br>
+permitirnos escribir nombres en la barra del navegador,<br>
+nombres como www.thepiratebay.orgen ves de<br>
+escribir 194.71.107.15<br>
+<br>
+Encontramos DNSMasq ; Corresponde a nosotros<br>
+estudiarlo para el viernes.<br>
+<br>
+aquí el manual:<br>
+<br>
+<a href="http://www.thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html" target="_blank">http://www.thekelleys.org.uk/<u></u>dnsmasq/docs/dnsmasq-man.html</a><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+______________________________<u></u>_________________<br>
+unloquer mailing list<br>
+<a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/<u></u>mailman/listinfo/unloquer</a><br>
+</blockquote></div><br>
+</div></div></blockquote></div></div></div><br>
+<br>_______________________________________________<br>
+unloquer mailing list<br>
+<a href="mailto:unloquer@lists.aktivix.org" target="_blank">unloquer@lists.aktivix.org</a><br>
+<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+<br></blockquote></div></div></div><br></div>
+<br>_______________________________________________<br>
+unloquer mailing list<br>
+<a href="mailto:unloquer@lists.aktivix.org">unloquer@lists.aktivix.org</a><br>
+<a href="https://lists.aktivix.org/mailman/listinfo/unloquer" target="_blank">https://lists.aktivix.org/mailman/listinfo/unloquer</a><br>
+<br></blockquote></div><br>
+
+</div></body>
+</html>
+</table></div>

@@ -1,0 +1,16 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Para no dejar en el aire ...</title>
+<link rel="important stylesheet" href="">
+<style>div.headerdisplayname {font-weight:bold;}</style></head>
+<body>
+<table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part1"><tr><td><div class="headerdisplayname" style="display:inline;">Asunto: </div>Para no dejar en el aire ...</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">De: </div>&quot;brolin .&quot; &lt;brolin108@gmail.com&gt;</td></tr><tr><td><div class="headerdisplayname" style="display:inline;">Fecha: </div>09/02/10 14:22</td></tr></table><table border=0 cellspacing=0 cellpadding=0 width="100%" class="header-part2"><tr><td><div class="headerdisplayname" style="display:inline;">Para: </div>hackerspace medellin <unloquer@lists.aktivix.org></td></tr></table><br>
+<div class="moz-text-html"  lang="x-western">Cambiar tamanio de fuente on the fly -&gt; <a href="http://lists.schmorp.de/pipermail/rxvt-unicode/2007q3/000433.html">http://lists.schmorp.de/pipermail/rxvt-unicode/2007q3/000433.html</a><br><br>&lt;script para arrancar sooperlooper conectado con jack en rc.lua&gt;<br>
+#!/bin/bash<br><br>jackd -d alsa &amp;<br>sleep 10<br>slgui &amp;<br>sleep 10<br>jack_connect sooperlooper:common_out_1 system:playback_1<br>jack_connect sooperlooper:common_out_2 system:playback_2<br>jack_connect system:capture_1 sooperlooper:common_in_1<br>
+jack_connect system:capture_2 sooperlooper:common_in_2<br><br>&lt;/script&gt;<br><br>sooperlooper:loop0_in_1 &lt;Sin conectar&gt;<br>sooperlooper:loop0_out_1 &lt;Sin conectar&gt;<br>sooperlooper:loop0_in_2 &lt;Sin conectar&gt;<br>
+sooperlooper:loop0_out_2 &lt;Sin conectar&gt;<br><br>jack_lsp -&gt; para ver los puertos de audio disponibles en el sistema<br>jack_connect puertoOrigen puertoDestino<br><br>referencia: <a href="http://dis-dot-dat.net/index.cgi?item=/jacktuts/starting/compiling">http://dis-dot-dat.net/index.cgi?item=/jacktuts/starting/compiling</a><br>
+<br>slgui -&gt; sooperlooper modo grafico<br><br><br><br><br>
+
+</div></body>
+</html>
+</table></div>
